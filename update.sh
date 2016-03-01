@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-#Bash script for languages.koodimonni.fi cronjob
+#Bash script for https://wp-languages.github.io cronjob
 
 #Ask for changes in translations from wordpress.org and save results in satis.json
 #Save into variable so that can be shouted out

@@ -1,7 +1,9 @@
 {
     "name": "Wordpress language packs",
     "description": "Composer language packs for Wordpress translations. This includes translations for core and official themes and few plugins.",
-    "homepage": "http://languages.koodimonni.fi",
+    "homepage": "https://wp-languages.github.io",
+    "issues": "https://github.com/wp-languages/wp-languages.github.io",
+    "forum": "https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021",
     "require-all": true,
     "require-dependencies": true,
     "repositories": []
