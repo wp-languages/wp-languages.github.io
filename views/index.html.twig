@@ -14,7 +14,12 @@
 
       ga('create', 'UA-53312302-1', 'auto');
       ga('send', 'pageview');
-
+    </script>
+    <script>
+    /* If we are in github.io redirect to https */
+    if (window.location.host.substr(-10) == '.github.io' && window.location.protocol != 'https:') {
+        window.location.protocol = 'https:';
+    }
     </script>
 </head>
 <body>
