@@ -2,7 +2,6 @@
 <?php
 
 # Script to catalog all translation packages into composer packages from wordpress.org api.
-# In addition this looks up woocommerce translations from github.
 # It caches all results from sources into config/wp-packages.json which is a set of packages.
 # Set means that every package is only defined in that file just once.
 # Then it builds complete information for satis using config/satis-template.json as template
@@ -44,7 +43,7 @@ function get_json_url($url) {
   curl_setopt($ch, CURLOPT_POST, false);
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-  curl_setopt($ch, CURLOPT_USERAGENT,'Curl-bot for: languages.koodimonni.fi.');
+  curl_setopt($ch, CURLOPT_USERAGENT,'Sorry for traffic! This is curl-bot for: https://wp-languages.github.io.');
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
