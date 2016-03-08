@@ -20067,6 +20067,11 @@
                     "1.9": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentytwelve/1.9/uz_UZ.zip"
                     }
+                },
+                "hi_in": {
+                    "1.9": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentytwelve/1.9/hi_IN.zip"
+                    }
                 }
             },
             "twentyeleven": {
