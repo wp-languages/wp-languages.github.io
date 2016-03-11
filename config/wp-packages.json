@@ -23142,6 +23142,11 @@
                     "2.1": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentyten/2.1/it_IT.zip"
                     }
+                },
+                "fr_ca": {
+                    "2.1": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentyten/2.1/fr_CA.zip"
+                    }
                 }
             },
             "twentysixteen": {
