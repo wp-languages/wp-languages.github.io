@@ -22428,6 +22428,11 @@
                     "1.4": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentyfifteen/1.4/fr_BE.zip"
                     }
+                },
+                "pa_in": {
+                    "1.4": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentyfifteen/1.4/pa_IN.zip"
+                    }
                 }
             },
             "twentyten": {
