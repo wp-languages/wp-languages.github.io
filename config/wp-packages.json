@@ -23775,6 +23775,11 @@
                     "1.1": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentysixteen/1.1/lb_LU.zip"
                     }
+                },
+                "ka_ge": {
+                    "1.1": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentysixteen/1.1/ka_GE.zip"
+                    }
                 }
             }
         }
