@@ -2730,6 +2730,9 @@
                     },
                     "v2.4.13": {
                         "dist": "https://raw.githubusercontent.com/woothemes/woocommerce-language-packs/884b6708af6b2573f564909a98565fe5074332ce/packages/eu.zip"
+                    },
+                    "2.5.5": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.5.5/eu.zip"
                     }
                 },
                 "fa_ir": {
