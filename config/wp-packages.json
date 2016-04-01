@@ -10542,6 +10542,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/en_GB.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/en_GB.zip"
                     }
                 },
                 "en_au": {
@@ -10574,6 +10577,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/en_AU.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/en_AU.zip"
                     }
                 },
                 "en_ca": {
@@ -10603,6 +10609,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/en_CA.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/en_CA.zip"
                     }
                 },
                 "es_pe": {
@@ -10629,6 +10638,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/es_PE.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/es_PE.zip"
                     }
                 },
                 "es_es": {
@@ -10663,6 +10675,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/es_CL.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/es_CL.zip"
                     }
                 },
                 "fi": {
@@ -10683,6 +10698,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/fi.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/fi.zip"
                     }
                 },
                 "fr_fr": {
@@ -10703,6 +10721,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/fr_FR.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/fr_FR.zip"
                     }
                 },
                 "gl_es": {
@@ -10740,6 +10761,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/hr.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/hr.zip"
                     }
                 },
                 "id_id": {
@@ -10853,6 +10877,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/pl_PL.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/pl_PL.zip"
                     }
                 },
                 "pt_pt": {
@@ -10893,6 +10920,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/ru_RU.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/ru_RU.zip"
                     }
                 },
                 "sk_sk": {
@@ -10916,6 +10946,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/sk_SK.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/sk_SK.zip"
                     }
                 },
                 "sv_se": {
@@ -10948,6 +10981,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/sv_SE.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/sv_SE.zip"
                     }
                 },
                 "az": {
@@ -10998,6 +11034,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/ro_RO.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/ro_RO.zip"
                     }
                 },
                 "da_dk": {
@@ -11032,6 +11071,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/is_IS.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/is_IS.zip"
                     }
                 },
                 "ps": {
@@ -11057,6 +11099,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/eo.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/eo.zip"
                     }
                 },
                 "th": {
@@ -11083,6 +11128,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/th.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/th.zip"
                     }
                 },
                 "cy": {
@@ -11116,6 +11164,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/sq.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/sq.zip"
                     }
                 },
                 "eu": {
@@ -11165,6 +11216,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/en_NZ.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/en_NZ.zip"
                     }
                 },
                 "de_de_formal": {
@@ -11187,6 +11241,9 @@
                     },
                     "3.1.9": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.9/el.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/el.zip"
                     }
                 }
             },
