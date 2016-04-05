@@ -22555,6 +22555,11 @@
                     "1.4": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentyfifteen/1.4/pa_IN.zip"
                     }
+                },
+                "ckb": {
+                    "1.4": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentyfifteen/1.4/ckb.zip"
+                    }
                 }
             },
             "twentyten": {
@@ -23373,6 +23378,11 @@
                 "fr_ca": {
                     "2.1": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentyten/2.1/fr_CA.zip"
+                    }
+                },
+                "ckb": {
+                    "2.1": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentyten/2.1/ckb.zip"
                     }
                 }
             },
