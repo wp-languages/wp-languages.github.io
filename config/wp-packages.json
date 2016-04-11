@@ -16681,6 +16681,11 @@
                     "4.4.2": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.2/cs_CZ.zip"
                     }
+                },
+                "de_ch_informal": {
+                    "4.4.2": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.4.2/de_CH_informal.zip"
+                    }
                 }
             }
         },
