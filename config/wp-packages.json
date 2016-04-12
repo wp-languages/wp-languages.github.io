@@ -12993,6 +12993,9 @@
                     },
                     "4.5-rc3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5-rc3/es_ES.zip"
+                    },
+                    "4.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5/es_ES.zip"
                     }
                 },
                 "es_cl": {
