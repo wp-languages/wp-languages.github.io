@@ -11880,6 +11880,9 @@
                     },
                     "4.1.10": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.10/az.zip"
+                    },
+                    "4.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5/az.zip"
                     }
                 },
                 "bg_bg": {
