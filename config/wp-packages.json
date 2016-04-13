@@ -14974,6 +14974,9 @@
                     },
                     "4.1.10": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.10/ru_RU.zip"
+                    },
+                    "4.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5/ru_RU.zip"
                     }
                 },
                 "sk_sk": {
