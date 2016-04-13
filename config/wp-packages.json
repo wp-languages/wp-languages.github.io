@@ -16740,6 +16740,9 @@
                     },
                     "4.3.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.3/ary.zip"
+                    },
+                    "4.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5/ary.zip"
                     }
                 },
                 "vi": {
