@@ -15538,6 +15538,9 @@
                     },
                     "4.2.7": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.7/zh_CN.zip"
+                    },
+                    "4.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5/zh_CN.zip"
                     }
                 },
                 "zh_tw": {
