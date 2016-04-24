@@ -11205,6 +11205,9 @@
                 "tr_tr": {
                     "3.1": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1/tr_TR.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/tr_TR.zip"
                     }
                 },
                 "zh_cn": {
