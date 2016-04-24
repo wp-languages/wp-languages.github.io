@@ -10469,6 +10469,9 @@
                 "bg_bg": {
                     "3.0": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.0/bg_BG.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/bg_BG.zip"
                     }
                 },
                 "bs_ba": {
