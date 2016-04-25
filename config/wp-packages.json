@@ -13944,6 +13944,9 @@
                     },
                     "4.1.10": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.10/hu_HU.zip"
+                    },
+                    "4.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5/hu_HU.zip"
                     }
                 },
                 "id_id": {
@@ -16812,6 +16815,9 @@
                     },
                     "4.4.2": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.2/es_VE.zip"
+                    },
+                    "4.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5/es_VE.zip"
                     }
                 },
                 "hi_in": {
