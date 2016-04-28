@@ -17041,6 +17041,9 @@
                     },
                     "4.3.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.3/en_ZA.zip"
+                    },
+                    "4.5.1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5.1/en_ZA.zip"
                     }
                 },
                 "fr_ca": {
