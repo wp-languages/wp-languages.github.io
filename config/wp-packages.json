@@ -11743,6 +11743,11 @@
                     "2.5.8": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.8/en_GB.zip"
                     }
+                },
+                "tr_tr": {
+                    "2.5.8": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.8/tr_TR.zip"
+                    }
                 }
             }
         },
