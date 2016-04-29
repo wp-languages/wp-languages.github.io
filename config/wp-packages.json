@@ -10492,6 +10492,9 @@
                     },
                     "3.1.5": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.5/bs_BA.zip"
+                    },
+                    "3.1.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.10/bs_BA.zip"
                     }
                 },
                 "ca": {
