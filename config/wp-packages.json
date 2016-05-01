@@ -11751,6 +11751,11 @@
                     "2.5.8": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.8/tr_TR.zip"
                     }
+                },
+                "en_nz": {
+                    "2.5.8": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.8/en_NZ.zip"
+                    }
                 }
             }
         },
