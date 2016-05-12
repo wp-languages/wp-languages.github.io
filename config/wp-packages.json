@@ -26866,6 +26866,11 @@
                     "1.2": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentysixteen/1.2/es_GT.zip"
                     }
+                },
+                "ug_cn": {
+                    "1.2": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentysixteen/1.2/ug_CN.zip"
+                    }
                 }
             }
         }
