@@ -11236,6 +11236,9 @@
                 "cy": {
                     "3.1": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1/cy.zip"
+                    },
+                    "3.1.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.11/cy.zip"
                     }
                 },
                 "sr_rs": {
