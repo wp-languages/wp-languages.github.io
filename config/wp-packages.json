@@ -13579,6 +13579,9 @@
                     },
                     "4.2.8": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.8/es_CL.zip"
+                    },
+                    "4.1.11": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.1.11/es_CL.zip"
                     }
                 },
                 "es_pe": {
