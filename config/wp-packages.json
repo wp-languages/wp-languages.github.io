@@ -13885,6 +13885,9 @@
                     },
                     "4.1.11": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.11/fa_IR.zip"
+                    },
+                    "4.5.2": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5.2/fa_IR.zip"
                     }
                 },
                 "fi": {
