@@ -11381,6 +11381,11 @@
                     "3.1.11": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.11/el.zip"
                     }
+                },
+                "es_ve": {
+                    "3.1.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.11/es_VE.zip"
+                    }
                 }
             },
             "wordpress-importer": {
