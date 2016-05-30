@@ -18044,6 +18044,12 @@
                     },
                     "4.2.8": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.8/es_VE.zip"
+                    },
+                    "4.4.3": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.4.3/es_VE.zip"
+                    },
+                    "4.3.4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.3.4/es_VE.zip"
                     }
                 },
                 "hi_in": {
