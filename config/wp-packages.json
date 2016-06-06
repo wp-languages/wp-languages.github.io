@@ -18232,6 +18232,9 @@
                     },
                     "4.2.8": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.8/ms_MY.zip"
+                    },
+                    "4.1.11": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.1.11/ms_MY.zip"
                     }
                 },
                 "es_ar": {
