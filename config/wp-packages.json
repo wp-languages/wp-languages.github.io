@@ -4591,6 +4591,9 @@
                     },
                     "2.5.5": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.5.5/ja.zip"
+                    },
+                    "2.6.0": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.0/ja.zip"
                     }
                 },
                 "ka_ge": {
