@@ -10553,6 +10553,11 @@
                     "2.5.5": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.5.5/oci.zip"
                     }
+                },
+                "en_za": {
+                    "2.6.1": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.1/en_ZA.zip"
+                    }
                 }
             },
             "akismet": {
