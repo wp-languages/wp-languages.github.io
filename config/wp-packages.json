@@ -6291,6 +6291,9 @@
                     },
                     "2.5.5": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.5.5/pl_PL.zip"
+                    },
+                    "2.6.1": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.1/pl_PL.zip"
                     }
                 },
                 "pt_br": {
