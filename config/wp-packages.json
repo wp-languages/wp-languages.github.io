@@ -9748,6 +9748,9 @@
                     },
                     "v2.4.13": {
                         "dist": "https://raw.githubusercontent.com/woothemes/woocommerce-language-packs/884b6708af6b2573f564909a98565fe5074332ce/packages/uk.zip"
+                    },
+                    "2.6.2": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.2/uk.zip"
                     }
                 },
                 "zh_cn.gb2312": {
