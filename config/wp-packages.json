@@ -14917,6 +14917,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/hr.zip"
+                    },
+                    "4.4.4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.4.4/hr.zip"
                     }
                 },
                 "hu_hu": {
