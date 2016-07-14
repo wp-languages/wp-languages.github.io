@@ -19140,6 +19140,9 @@
                     },
                     "4.5.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.3/fr_CA.zip"
+                    },
+                    "4.4.4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.4.4/fr_CA.zip"
                     }
                 },
                 "ms_my": {
