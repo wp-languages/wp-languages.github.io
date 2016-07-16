@@ -19234,6 +19234,9 @@
                     },
                     "4.5.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.3/es_AR.zip"
+                    },
+                    "4.4.4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.4.4/es_AR.zip"
                     }
                 },
                 "nl_nl_formal": {
