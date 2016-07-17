@@ -15656,6 +15656,12 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/ko_KR.zip"
+                    },
+                    "4.4.4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.4.4/ko_KR.zip"
+                    },
+                    "4.3.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.3.5/ko_KR.zip"
                     }
                 },
                 "my_mm": {
