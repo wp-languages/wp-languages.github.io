@@ -27971,6 +27971,16 @@
                     "1.2": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentysixteen/1.2/ast.zip"
                     }
+                },
+                "oci": {
+                    "1.2": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentysixteen/1.2/oci.zip"
+                    }
+                },
+                "pa_in": {
+                    "1.2": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentysixteen/1.2/pa_IN.zip"
+                    }
                 }
             }
         }
