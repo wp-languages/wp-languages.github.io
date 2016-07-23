@@ -12402,6 +12402,12 @@
                     },
                     "4.5.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.3/ar.zip"
+                    },
+                    "4.4.4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.4.4/ar.zip"
+                    },
+                    "4.3.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.3.5/ar.zip"
                     }
                 },
                 "az": {
