@@ -4517,6 +4517,9 @@
                     },
                     "2.5.5": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.5.5/it_IT.zip"
+                    },
+                    "2.6.3": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/it_IT.zip"
                     }
                 },
                 "ja": {
