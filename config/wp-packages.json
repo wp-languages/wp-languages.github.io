@@ -390,6 +390,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/bg_BG.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/bg_BG.zip"
                     }
                 },
                 "bn_bd": {
@@ -765,6 +768,9 @@
                     },
                     "v2.4.13": {
                         "dist": "https://raw.githubusercontent.com/woothemes/woocommerce-language-packs/884b6708af6b2573f564909a98565fe5074332ce/packages/ca.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/ca.zip"
                     }
                 },
                 "cs_cz": {
@@ -1426,6 +1432,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/de_DE.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/de_DE.zip"
                     }
                 },
                 "el": {
@@ -1837,6 +1846,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/en_GB.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/en_GB.zip"
                     }
                 },
                 "es_ar": {
@@ -2364,6 +2376,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/es_ES.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/es_ES.zip"
                     }
                 },
                 "es_mx": {
@@ -2507,6 +2522,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/es_MX.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/es_MX.zip"
                     }
                 },
                 "et": {
@@ -2659,6 +2677,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/et.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/et.zip"
                     }
                 },
                 "eu": {
@@ -3064,6 +3085,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/fi.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/fi.zip"
                     }
                 },
                 "fi_fi": {
@@ -3466,6 +3490,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/fr_FR.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/fr_FR.zip"
                     }
                 },
                 "he_il": {
@@ -3862,6 +3889,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/hr.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/hr.zip"
                     }
                 },
                 "hu_hu": {
@@ -4520,6 +4550,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/it_IT.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/it_IT.zip"
                     }
                 },
                 "ja": {
@@ -4672,6 +4705,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/ja.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/ja.zip"
                     }
                 },
                 "ka_ge": {
@@ -5821,6 +5857,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/nb_NO.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/nb_NO.zip"
                     }
                 },
                 "ne_np": {
@@ -6098,6 +6137,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/nl_NL.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/nl_NL.zip"
                     }
                 },
                 "nn_no": {
@@ -6372,6 +6414,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/pl_PL.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/pl_PL.zip"
                     }
                 },
                 "pt_br": {
@@ -6524,6 +6569,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/pt_BR.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/pt_BR.zip"
                     }
                 },
                 "pt_pt": {
@@ -6670,6 +6718,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/pt_PT.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/pt_PT.zip"
                     }
                 },
                 "ro_ro": {
@@ -6804,6 +6855,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/ro_RO.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/ro_RO.zip"
                     }
                 },
                 "ru_ru": {
@@ -6956,6 +7010,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/ru_RU.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/ru_RU.zip"
                     }
                 },
                 "sk_sk": {
@@ -7102,6 +7159,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/sk_SK.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/sk_SK.zip"
                     }
                 },
                 "sl_si": {
@@ -7757,6 +7817,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/th.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/th.zip"
                     }
                 },
                 "tl": {
@@ -8433,6 +8496,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/zh_CN.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/zh_CN.zip"
                     }
                 },
                 "zh_tw": {
@@ -9829,6 +9895,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/uk.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/uk.zip"
                     }
                 },
                 "zh_cn.gb2312": {
@@ -10609,6 +10678,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/en_AU.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/en_AU.zip"
                     }
                 },
                 "de_de_formal": {
@@ -10655,6 +10727,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/en_CA.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/en_CA.zip"
                     }
                 },
                 "nl_nl_formal": {
@@ -10692,6 +10767,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/en_NZ.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/en_NZ.zip"
                     }
                 },
                 "fr_ca": {
@@ -10713,6 +10791,9 @@
                     },
                     "2.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.3/en_ZA.zip"
+                    },
+                    "2.6.4": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.4/en_ZA.zip"
                     }
                 }
             },
