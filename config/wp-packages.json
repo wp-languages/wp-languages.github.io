@@ -19550,6 +19550,9 @@
                     },
                     "4.4.4": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.4/es_GT.zip"
+                    },
+                    "4.5.3": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5.3/es_GT.zip"
                     }
                 },
                 "cs_cz": {
