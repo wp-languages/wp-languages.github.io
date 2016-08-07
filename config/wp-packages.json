@@ -18754,6 +18754,9 @@
                     },
                     "4.2.9": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.9/et.zip"
+                    },
+                    "4.5.3": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.5.3/et.zip"
                     }
                 },
                 "tl": {
