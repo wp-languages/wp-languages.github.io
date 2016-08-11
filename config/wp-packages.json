@@ -12397,6 +12397,11 @@
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/da_DK.zip"
                     }
+                },
+                "pt_pt": {
+                    "2.5.10": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/pt_PT.zip"
+                    }
                 }
             }
         },
