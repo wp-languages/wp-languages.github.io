@@ -12512,6 +12512,9 @@
                     },
                     "4.2.9": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.9/ar.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ar.zip"
                     }
                 },
                 "az": {
@@ -12753,6 +12756,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/bg_BG.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/bg_BG.zip"
                     }
                 },
                 "bs_ba": {
@@ -12991,6 +12997,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/ca.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ca.zip"
                     }
                 },
                 "cy": {
@@ -13122,6 +13131,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/cy.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/cy.zip"
                     }
                 },
                 "da_dk": {
@@ -13253,6 +13265,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/da_DK.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/da_DK.zip"
                     }
                 },
                 "de_de": {
@@ -13384,6 +13399,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/de_DE.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/de_DE.zip"
                     }
                 },
                 "el": {
@@ -13512,6 +13530,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/el.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/el.zip"
                     }
                 },
                 "en_au": {
@@ -13643,6 +13664,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/en_AU.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/en_AU.zip"
                     }
                 },
                 "en_gb": {
@@ -13774,6 +13798,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/en_GB.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/en_GB.zip"
                     }
                 },
                 "en_ca": {
@@ -13905,6 +13932,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/en_CA.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/en_CA.zip"
                     }
                 },
                 "eo": {
@@ -14027,6 +14057,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/eo.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/eo.zip"
                     }
                 },
                 "es_es": {
@@ -14158,6 +14191,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/es_ES.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/es_ES.zip"
                     }
                 },
                 "es_cl": {
@@ -14232,6 +14268,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/es_CL.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/es_CL.zip"
                     }
                 },
                 "es_pe": {
@@ -14464,6 +14503,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/eu.zip"
+                    },
+                    "4.6-rc1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc1/eu.zip"
                     }
                 },
                 "fa_ir": {
@@ -14687,6 +14729,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/fi.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/fi.zip"
                     }
                 },
                 "fr_fr": {
@@ -14815,6 +14860,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/fr_FR.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/fr_FR.zip"
                     }
                 },
                 "gd": {
@@ -15091,6 +15139,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/he_IL.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/he_IL.zip"
                     }
                 },
                 "hr": {
@@ -15219,6 +15270,9 @@
                     },
                     "4.4.4": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.4/hr.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/hr.zip"
                     }
                 },
                 "hu_hu": {
@@ -15460,6 +15514,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/id_ID.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/id_ID.zip"
                     }
                 },
                 "it_it": {
@@ -15591,6 +15648,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/it_IT.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/it_IT.zip"
                     }
                 },
                 "ja": {
@@ -15722,6 +15782,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/ja.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ja.zip"
                     }
                 },
                 "ko_kr": {
@@ -15847,6 +15910,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/ko_KR.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ko_KR.zip"
                     }
                 },
                 "my_mm": {
@@ -16019,6 +16085,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/nb_NO.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/nb_NO.zip"
                     }
                 },
                 "nl_nl": {
@@ -16150,6 +16219,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/nl_NL.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/nl_NL.zip"
                     }
                 },
                 "pl_pl": {
@@ -16400,6 +16472,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/pt_BR.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/pt_BR.zip"
                     }
                 },
                 "pt_pt": {
@@ -16528,6 +16603,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/pt_PT.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/pt_PT.zip"
                     }
                 },
                 "ro_ro": {
@@ -16656,6 +16734,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/ro_RO.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ro_RO.zip"
                     }
                 },
                 "ru_ru": {
@@ -16778,6 +16859,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/ru_RU.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ru_RU.zip"
                     }
                 },
                 "sk_sk": {
@@ -16909,6 +16993,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/sk_SK.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/sk_SK.zip"
                     }
                 },
                 "sr_rs": {
@@ -17040,6 +17127,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/sr_RS.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/sr_RS.zip"
                     }
                 },
                 "sv_se": {
@@ -17171,6 +17261,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/sv_SE.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/sv_SE.zip"
                     }
                 },
                 "th": {
@@ -17424,6 +17517,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/tr_TR.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/tr_TR.zip"
                     }
                 },
                 "zh_cn": {
@@ -17682,6 +17778,9 @@
                     },
                     "4.5.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.3/sl_SI.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/sl_SI.zip"
                     }
                 },
                 "es_mx": {
@@ -17929,6 +18028,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/lt_LT.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/lt_LT.zip"
                     }
                 },
                 "de_ch": {
@@ -18048,6 +18150,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/de_CH.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/de_CH.zip"
                     }
                 },
                 "haz": {
@@ -18258,6 +18363,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/is_IS.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/is_IS.zip"
                     }
                 },
                 "ps": {
@@ -18528,6 +18636,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/nn_NO.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/nn_NO.zip"
                     }
                 },
                 "sq": {
@@ -18644,6 +18755,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/sq.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/sq.zip"
                     }
                 },
                 "oci": {
@@ -18697,6 +18811,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/oci.zip"
+                    },
+                    "4.6-rc2": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc2/oci.zip"
                     }
                 },
                 "et": {
@@ -18765,6 +18882,9 @@
                     },
                     "4.5.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.3/et.zip"
+                    },
+                    "4.6-rc2": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc2/et.zip"
                     }
                 },
                 "tl": {
@@ -18916,6 +19036,9 @@
                     },
                     "4.4.4": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.4/de_DE_formal.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/de_DE_formal.zip"
                     }
                 },
                 "hy": {
@@ -19016,6 +19139,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/en_NZ.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/en_NZ.zip"
                     }
                 },
                 "es_co": {
@@ -19068,6 +19194,9 @@
                     },
                     "4.5.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.3/bn_BD.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/bn_BD.zip"
                     }
                 },
                 "fr_be": {
@@ -19130,6 +19259,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/fr_BE.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/fr_BE.zip"
                     }
                 },
                 "ary": {
@@ -19168,6 +19300,9 @@
                     },
                     "4.3.4": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.4/ary.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ary.zip"
                     }
                 },
                 "vi": {
@@ -19238,6 +19373,9 @@
                     },
                     "4.2.9": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.9/es_VE.zip"
+                    },
+                    "4.6-rc1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc1/es_VE.zip"
                     }
                 },
                 "hi_in": {
@@ -19303,6 +19441,9 @@
                     },
                     "4.2.9": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.9/hi_IN.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/hi_IN.zip"
                     }
                 },
                 "en_za": {
@@ -19338,6 +19479,9 @@
                     },
                     "4.3.4": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.4/en_ZA.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/en_ZA.zip"
                     }
                 },
                 "fr_ca": {
@@ -19403,6 +19547,9 @@
                     },
                     "4.3.5": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.3.5/fr_CA.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/fr_CA.zip"
                     }
                 },
                 "ms_my": {
@@ -19462,6 +19609,9 @@
                     },
                     "4.1.12": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.12/ms_MY.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ms_MY.zip"
                     }
                 },
                 "es_ar": {
@@ -19491,6 +19641,9 @@
                     },
                     "4.4.4": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.4/es_AR.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/es_AR.zip"
                     }
                 },
                 "nl_nl_formal": {
@@ -19539,6 +19692,9 @@
                     },
                     "4.4.4": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.4/ka_GE.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/ka_GE.zip"
                     }
                 },
                 "azb": {
@@ -19567,6 +19723,9 @@
                     },
                     "4.5.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.3/es_GT.zip"
+                    },
+                    "4.6-rc1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc1/es_GT.zip"
                     }
                 },
                 "cs_cz": {
@@ -19592,6 +19751,9 @@
                     },
                     "4.4.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.3/de_CH_informal.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/de_CH_informal.zip"
                     }
                 },
                 "mr": {
@@ -19600,6 +19762,9 @@
                     },
                     "4.5.2": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.2/mr.zip"
+                    },
+                    "4.6-rc4": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6-rc4/mr.zip"
                     }
                 },
                 "mk_mk": {
