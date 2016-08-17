@@ -18637,6 +18637,9 @@
                     },
                     "4.5.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.5.3/uk.zip"
+                    },
+                    "4.6": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6/uk.zip"
                     }
                 },
                 "nn_no": {
