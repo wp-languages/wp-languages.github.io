@@ -19319,6 +19319,9 @@
                     },
                     "4.2.9": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.9/tl.zip"
+                    },
+                    "4.3.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.3.5/tl.zip"
                     }
                 },
                 "de_de_formal": {
