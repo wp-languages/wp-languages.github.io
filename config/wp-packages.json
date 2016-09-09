@@ -23044,6 +23044,11 @@
                     "1.8": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentyfourteen/1.8/es_GT.zip"
                     }
+                },
+                "bo": {
+                    "1.8": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentyfourteen/1.8/bo.zip"
+                    }
                 }
             },
             "twentythirteen": {
@@ -29674,6 +29679,11 @@
                 "ast": {
                     "1.6": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentyfifteen/1.6/ast.zip"
+                    }
+                },
+                "bo": {
+                    "1.6": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentyfifteen/1.6/bo.zip"
                     }
                 }
             },
