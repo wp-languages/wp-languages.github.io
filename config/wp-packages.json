@@ -15014,6 +15014,9 @@
                     },
                     "4.1.13": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.13/es_PE.zip"
+                    },
+                    "4.6.1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6.1/es_PE.zip"
                     }
                 },
                 "eu": {
@@ -21399,6 +21402,11 @@
                 "szl": {
                     "4.6.1": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.6.1/szl.zip"
+                    }
+                },
+                "lv": {
+                    "4.6.1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6.1/lv.zip"
                     }
                 }
             }
