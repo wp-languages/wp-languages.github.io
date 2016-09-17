@@ -12319,6 +12319,11 @@
                     "0.6.3": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/wordpress-importer/0.6.3/lt_LT.zip"
                     }
+                },
+                "cs_cz": {
+                    "0.6.3": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/wordpress-importer/0.6.3/cs_CZ.zip"
+                    }
                 }
             },
             "bbpress": {
