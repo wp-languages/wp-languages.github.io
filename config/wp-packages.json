@@ -11822,6 +11822,11 @@
                     "3.2": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.2/cs_CZ.zip"
                     }
+                },
+                "uk": {
+                    "3.2": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.2/uk.zip"
+                    }
                 }
             },
             "wordpress-importer": {
