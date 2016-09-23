@@ -20811,6 +20811,9 @@
                     },
                     "4.2.10": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.10/vi.zip"
+                    },
+                    "4.1.13": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.1.13/vi.zip"
                     }
                 },
                 "es_ve": {
