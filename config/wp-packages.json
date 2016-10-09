@@ -18536,6 +18536,9 @@
                     },
                     "4.1.13": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.13/th.zip"
+                    },
+                    "4.6.1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6.1/th.zip"
                     }
                 },
                 "tr_tr": {
