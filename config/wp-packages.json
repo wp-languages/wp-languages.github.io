@@ -21440,6 +21440,11 @@
                     "4.6.1": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.6.1/lv.zip"
                     }
+                },
+                "zh_hk": {
+                    "4.6.1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6.1/zh_HK.zip"
+                    }
                 }
             }
         },
