@@ -21260,6 +21260,9 @@
                     },
                     "4.4.3": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.4.3/nl_NL_formal.zip"
+                    },
+                    "4.6.1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6.1/nl_NL_formal.zip"
                     }
                 },
                 "ceb": {
