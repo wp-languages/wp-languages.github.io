@@ -20246,6 +20246,9 @@
                     },
                     "4.1.13": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.1.13/sq.zip"
+                    },
+                    "4.4.5": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.4.5/sq.zip"
                     }
                 },
                 "oci": {
