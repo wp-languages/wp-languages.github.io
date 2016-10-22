@@ -20502,6 +20502,9 @@
                     },
                     "4.2.10": {
                         "dist": "https://downloads.wordpress.org/translation/core/4.2.10/et.zip"
+                    },
+                    "4.6.1": {
+                        "dist": "https://downloads.wordpress.org/translation/core/4.6.1/et.zip"
                     }
                 },
                 "tl": {
