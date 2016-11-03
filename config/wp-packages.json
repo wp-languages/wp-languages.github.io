@@ -12109,6 +12109,9 @@
                     },
                     "3.1.5": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.1.5/de_DE_formal.zip"
+                    },
+                    "3.2": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/akismet/3.2/de_DE_formal.zip"
                     }
                 },
                 "el": {
