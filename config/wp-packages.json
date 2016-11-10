@@ -12678,6 +12678,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/ca.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/ca.zip"
                     }
                 },
                 "en_au": {
@@ -12692,6 +12695,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/en_AU.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/en_AU.zip"
                     }
                 },
                 "es_es": {
@@ -12706,6 +12712,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/es_ES.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/es_ES.zip"
                     }
                 },
                 "hr": {
@@ -12720,6 +12729,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/hr.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/hr.zip"
                     }
                 },
                 "id_id": {
@@ -12734,6 +12746,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/id_ID.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/id_ID.zip"
                     }
                 },
                 "it_it": {
@@ -12748,6 +12763,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/it_IT.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/it_IT.zip"
                     }
                 },
                 "ko_kr": {
@@ -12762,6 +12780,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/ko_KR.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/ko_KR.zip"
                     }
                 },
                 "nb_no": {
@@ -12776,6 +12797,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/nb_NO.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/nb_NO.zip"
                     }
                 },
                 "nl_nl": {
@@ -12790,6 +12814,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/nl_NL.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/nl_NL.zip"
                     }
                 },
                 "pt_br": {
@@ -12804,6 +12831,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/pt_BR.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/pt_BR.zip"
                     }
                 },
                 "ro_ro": {
@@ -12818,6 +12848,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/ro_RO.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/ro_RO.zip"
                     }
                 },
                 "ru_ru": {
@@ -12832,6 +12865,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/ru_RU.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/ru_RU.zip"
                     }
                 },
                 "sv_se": {
@@ -12846,6 +12882,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/sv_SE.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/sv_SE.zip"
                     }
                 },
                 "th": {
@@ -12860,6 +12899,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/th.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/th.zip"
                     }
                 },
                 "hu_hu": {
@@ -12874,6 +12916,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/hu_HU.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/hu_HU.zip"
                     }
                 },
                 "fr_fr": {
@@ -12888,6 +12933,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/fr_FR.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/fr_FR.zip"
                     }
                 },
                 "de_de": {
@@ -12902,6 +12950,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/de_DE.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/de_DE.zip"
                     }
                 },
                 "en_ca": {
@@ -12913,6 +12964,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/en_CA.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/en_CA.zip"
                     }
                 },
                 "cy": {
@@ -12924,6 +12978,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/cy.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/cy.zip"
                     }
                 },
                 "sr_rs": {
@@ -12935,6 +12992,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/sr_RS.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/sr_RS.zip"
                     }
                 },
                 "he_il": {
@@ -12946,6 +13006,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/he_IL.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/he_IL.zip"
                     }
                 },
                 "ar": {
@@ -12968,6 +13031,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/ary.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/ary.zip"
                     }
                 },
                 "bg_bg": {
@@ -12979,6 +13045,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/bg_BG.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/bg_BG.zip"
                     }
                 },
                 "el": {
@@ -12990,6 +13059,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/el.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/el.zip"
                     }
                 },
                 "fi": {
@@ -13001,6 +13073,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/fi.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/fi.zip"
                     }
                 },
                 "ja": {
@@ -13012,6 +13087,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/ja.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/ja.zip"
                     }
                 },
                 "sl_si": {
@@ -13023,6 +13101,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/sl_SI.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/sl_SI.zip"
                     }
                 },
                 "es_cl": {
@@ -13034,6 +13115,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/es_CL.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/es_CL.zip"
                     }
                 },
                 "en_gb": {
@@ -13045,6 +13129,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/en_GB.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/en_GB.zip"
                     }
                 },
                 "tr_tr": {
@@ -13056,6 +13143,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/tr_TR.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/tr_TR.zip"
                     }
                 },
                 "en_nz": {
@@ -13067,6 +13157,9 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/en_NZ.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/en_NZ.zip"
                     }
                 },
                 "da_dk": {
@@ -13075,16 +13168,25 @@
                     },
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/da_DK.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/da_DK.zip"
                     }
                 },
                 "pt_pt": {
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/pt_PT.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/pt_PT.zip"
                     }
                 },
                 "zh_tw": {
                     "2.5.10": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.10/zh_TW.zip"
+                    },
+                    "2.5.11": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/bbpress/2.5.11/zh_TW.zip"
                     }
                 }
             }
