@@ -8915,6 +8915,9 @@
                     },
                     "2.5.5": {
                         "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.5.5/zh_TW.zip"
+                    },
+                    "2.6.7": {
+                        "dist": "https://downloads.wordpress.org/translation/plugin/woocommerce/2.6.7/zh_TW.zip"
                     }
                 },
                 "bs_ba": {
