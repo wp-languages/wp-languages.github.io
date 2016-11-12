@@ -28433,6 +28433,11 @@
                     "2.5": {
                         "dist": "https://downloads.wordpress.org/translation/theme/twentyeleven/2.5/uk.zip"
                     }
+                },
+                "en_gb": {
+                    "2.5": {
+                        "dist": "https://downloads.wordpress.org/translation/theme/twentyeleven/2.5/en_GB.zip"
+                    }
                 }
             },
             "twentyfifteen": {
