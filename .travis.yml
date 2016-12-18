@@ -1,25 +1,26 @@
 language: php
-php:
-- '7.1'
 sudo: false
 install:
-- composer install
+  - composer install
+before_install:
+  - phpenv config-rm xdebug.ini
 script:
-# Updates contents of satis.json
-- php bin/wp-org-api
-# Builds new site based on satis.json
-- php bin/satis build satis.json _site
+  # Updates contents of satis.json
+  - php bin/wp-org-api
+  # Builds new site based on satis.json
+  - php bin/satis build satis.json _site
 cache:
   directories:
   - "$HOME/.composer/cache"
 env:
   global:
-  - GIT_COMMIT_EMAIL: wp-language-bot@keksi.io
-  - GIT_COMMIT_USER: WP-Languages bot
-  - secure: rAfi2pq0+0WpQLc9y+qIVkd1+LciCqQlIhGtO0S8+yDvAIQWOWuyqb9kwRdKmLyEXgTE9huS60bQoVXQz99xHTMt0CNudEMQrh+YI4737AlZh7U0tF25G9BpLKFe/dZkJG5DcoZulqEUpnbtUhDmULWBLrMA3BcTHBWJ6yGaU4MEESUUuolljmhhn8yGH3Cf3qNvbZU1/xg5omaBQlTqi56WzaxpfQO1mpdLXcGRXHgWzWA3X20LjoH3tisPmQ1j8NRQtQnJPI4kTxD1Uyh9ysA5zj/ingWzrNm4Z5Zqnh2zKaTXhAkhIeC9jtOqhMf0U265seQypeUZP+uHKUesH+ezlLatOnpCx9ix1KY46Kv5QLNcPXWcOjm4czylshrDVNP9EUg3pwQ4HmWWAHre5vmhZtfT3revK7XiRPwsHZWA4rZeWrzWT3GyMlHztQDIa6y69cXF6/dHMK0ESL07Ej5SpddDo7c7geY8sZlklK6hg+lNZwy+zDUUVh9dPgQ26tvmVyrn5P213MHC9TrdY+TmhqFcwmJv2+Jn+qmeF3d99S7ioO6CgUKw/v63EUFGCRu8jIXpDzmvlzvnAyHRzg+T69wIj4XpKNw67V/cf39zHLX7nM7Qf+hnUwk6gOvy1cM/xyOlTyiUE0x5C5S4zk1QsDHE5hZdgMuv6DNhmrA=
+    - GIT_COMMIT_EMAIL: wp-language-bot@keksi.io
+    - GIT_COMMIT_USER: WP-Languages bot
+    - TRAVIS_DEPLOY_BRANCH: master
+    - secure: rAfi2pq0+0WpQLc9y+qIVkd1+LciCqQlIhGtO0S8+yDvAIQWOWuyqb9kwRdKmLyEXgTE9huS60bQoVXQz99xHTMt0CNudEMQrh+YI4737AlZh7U0tF25G9BpLKFe/dZkJG5DcoZulqEUpnbtUhDmULWBLrMA3BcTHBWJ6yGaU4MEESUUuolljmhhn8yGH3Cf3qNvbZU1/xg5omaBQlTqi56WzaxpfQO1mpdLXcGRXHgWzWA3X20LjoH3tisPmQ1j8NRQtQnJPI4kTxD1Uyh9ysA5zj/ingWzrNm4Z5Zqnh2zKaTXhAkhIeC9jtOqhMf0U265seQypeUZP+uHKUesH+ezlLatOnpCx9ix1KY46Kv5QLNcPXWcOjm4czylshrDVNP9EUg3pwQ4HmWWAHre5vmhZtfT3revK7XiRPwsHZWA4rZeWrzWT3GyMlHztQDIa6y69cXF6/dHMK0ESL07Ej5SpddDo7c7geY8sZlklK6hg+lNZwy+zDUUVh9dPgQ26tvmVyrn5P213MHC9TrdY+TmhqFcwmJv2+Jn+qmeF3d99S7ioO6CgUKw/v63EUFGCRu8jIXpDzmvlzvnAyHRzg+T69wIj4XpKNw67V/cf39zHLX7nM7Qf+hnUwk6gOvy1cM/xyOlTyiUE0x5C5S4zk1QsDHE5hZdgMuv6DNhmrA=
 deploy:
   skip_cleanup: true
   provider: script
-  script: _scripts/travis-deploy-to-gh-pages.sh
+  script: bin/travis-deploy-to-gh-pages.sh
   on:
     branch: src
