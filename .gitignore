@@ -1,2 +1,8 @@
 .DS_store
 vendor
+
+# Ignore all satis libraries
+satis.json
+
+# Ignore static html build by satis
+_site

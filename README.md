@@ -4,8 +4,8 @@
 - Supports **https** by using github.io ssl. Composer default configuration only accepts **https** by default starting from 2016.
 - Automatically creates composer packages for WordPress translations from api.wordpress.org.
 - This repo provides custom satis repository for WordPress languages. See more in [wp-languages.github.io](https://wp-languages.github.io/).
-- Repos are **updated every 30-minutes**.
 - If you would like to add more language files please submit a pull request.
+- Repos are updated daily with Travis CI.
 
 ## Example configuration with composer
 
@@ -88,12 +88,13 @@ Then add it to your composer like this example. You just need to update the vers
 ```
 # Clone the project to your own server
 $ git clone https://github.com/wp-languages/wp-languages.github.io /to/your/htdocs
-$ cd /to/your/htdocs && composer install
+$ cd /to/your/htdocs
+$ composer install
 
 # Set new cronjob
 $ crontab -e
 # Add following line to your cron
-*/30 * * * * cd /to/your/htdocs && bash update.sh
+*/30 * * * * cd /to/your/htdocs && php bin/wp-org-api && php bin/satis satis.json .
 ```
 
 ## License

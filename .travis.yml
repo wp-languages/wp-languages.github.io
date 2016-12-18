@@ -1,0 +1,26 @@
+language: php
+php:
+  - '7.1'
+sudo: false
+
+install:
+  - composer install
+script:
+  # Updates contents of satis.json
+  - php bin/wp-org-api
+
+  # Builds new site based on satis.json
+  - php bin/satis build satis.json _site
+cache:
+  directories:
+  - $HOME/.composer/cache
+env:
+  global:
+  - GIT_COMMIT_EMAIL: wp-language-bot@keksi.io
+  - GIT_COMMIT_USER: WP-Languages bot
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: _scripts/travis-deploy-to-gh-pages.sh
+  on:
+    branch: master
