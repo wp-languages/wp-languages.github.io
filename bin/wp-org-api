@@ -170,6 +170,11 @@ foreach ($packages['packages']["wordpress-language"]['core'] as $language => $of
       }
     }
 
+    if ( isset($languages_info[$language]) && isset( $languages_info[$language]['english_name'] ) ) {
+        $description = "Full Wordpress translation (including themes and core plugins) for {$languages_info[$language]['english_name']} - {$language}";
+    } else {
+        $description = "Full Wordpress translation (including themes and core plugins) for $language";
+    }
     $repositories[] = array(
       "type" => "package",
       "package" => array(
