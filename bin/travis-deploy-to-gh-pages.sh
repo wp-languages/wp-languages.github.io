@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy templates into build branch
-cp _config/travis.yml _site/.travis.yml
+cp _config/.travis.yml _site/.travis.yml
 cp _config/README.md _site/README.md
 
 # Open the build folder
