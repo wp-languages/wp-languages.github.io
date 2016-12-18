@@ -2,8 +2,8 @@
 
 ## Features
 - Supports **https** by using github.io ssl. Composer default configuration only accepts **https** by default starting from 2016.
-- Automatically creates composer packages for wordpress translations from api.wordpress.org.
-- This repo provides custom satis repository for wordpress languages. See more in [wp-languages.github.io](https://wp-languages.github.io/).
+- Automatically creates composer packages for WordPress translations from api.wordpress.org.
+- This repo provides custom satis repository for WordPress languages. See more in [wp-languages.github.io](https://wp-languages.github.io/).
 - Repos are **updated every 30-minutes**.
 - If you would like to add more language files please submit a pull request.
 
