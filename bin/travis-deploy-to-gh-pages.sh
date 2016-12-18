@@ -16,16 +16,19 @@ if [ "$SITE_DOMAIN" != "" ]; then
     echo $SITE_DOMAIN > CNAME
 fi
 
+# sed all outputs so that $GITHUB_ACCESS_TOKEN can be removed from output
+
 # Add github as remote
-git remote add github "https://$GITHUB_ACCESS_TOKEN@github.com/$TRAVIS_REPO_SLUG.git"
+{ git remote add github "https://$GITHUB_ACCESS_TOKEN@github.com/$TRAVIS_REPO_SLUG.git" 2>&1; } | \
+    sed "s|$GITHUB_ACCESS_TOKEN|REDACTED|g"
 
 # and add all files
-git add -A
+{ git add -A 2>&1; } | sed "s|$GITHUB_ACCESS_TOKEN|REDACTED|g"
 
 # Commit all files
-git commit -am "Builded gh-pages from $TRAVIS_BRANCH in Travis CI\nCommit-ID:$TRAVIS_COMMIT"
+{ git commit -am "Builded gh-pages from $TRAVIS_BRANCH in Travis CI\nCommit-ID:$TRAVIS_COMMIT" 2>&1; } | \
+    sed "s|$GITHUB_ACCESS_TOKEN|REDACTED|g"
 
 # Push current master branch as gh-pages into github
-# Don't output anything so that $GITHUB_ACCESS_TOKEN won't go into the logs
-echo "Pushing to https://github.com/$TRAVIS_REPO_SLUG quietly"
-git push github $TRAVIS_BRANCH:$TRAVIS_DEPLOY_BRANCH --force --quiet
+{ git push github $TRAVIS_BRANCH:$TRAVIS_DEPLOY_BRANCH --force 2>&1; } | \
+    sed "s|$GITHUB_ACCESS_TOKEN|REDACTED|g"
