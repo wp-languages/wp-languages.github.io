@@ -30,5 +30,5 @@ fi
     sed "s|$GITHUB_ACCESS_TOKEN|REDACTED|g"
 
 # Push current master branch as gh-pages into github
-{ git push github $TRAVIS_BRANCH:$TRAVIS_DEPLOY_BRANCH --force 2>&1; } | \
+{ git push github master:$TRAVIS_DEPLOY_BRANCH --force 2>&1; } | \
     sed "s|$GITHUB_ACCESS_TOKEN|REDACTED|g"
