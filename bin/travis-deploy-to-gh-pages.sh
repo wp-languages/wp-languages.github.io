@@ -23,14 +23,9 @@ git remote add github "https://$GITHUB_ACCESS_TOKEN@github.com/$TRAVIS_REPO_SLUG
 git add -A
 
 # Commit all files
-git commit -am "Builded gh-pages from master in Travis\nCommit-ID:$TRAVIS_COMMIT"
+git commit -am "Builded gh-pages from $TRAVIS_BRANCH in Travis CI\nCommit-ID:$TRAVIS_COMMIT"
 
 # Push current master branch as gh-pages into github
 # Don't output anything so that $GITHUB_ACCESS_TOKEN won't go into the logs
 echo "Pushing to https://github.com/$TRAVIS_REPO_SLUG quietly"
-git push github master:gh-pages --force --quiet
-
-# Runs Rakefile
-echo "Notifying search-engines"
-cd ..
-rake notify
+git push github $TRAVIS_BRANCH:$TRAVIS_DEPLOY_BRANCH --force --quiet
