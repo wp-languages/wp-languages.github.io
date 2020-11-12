@@ -4,6 +4,7 @@ sudo: false
 install:
   - composer install
 before_install:
+  - composer self-update --rollback
   - phpenv config-rm xdebug.ini
 script:
   # Updates contents of satis.json
