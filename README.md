@@ -5,8 +5,8 @@
 - Supports **https** by using github.io ssl. Composer default configuration only accepts **https** by default starting from 2016.
 - Automatically creates composer packages for WordPress translations from api.wordpress.org.
 - This repo provides custom satis repository for WordPress languages. See more in [wp-languages.github.io](https://wp-languages.github.io/).
-- If you would like to add more language files please submit a pull request.
-- Repos are updated daily with Travis CI.
+- To add more language files please submit a pull request.
+- Repos are updated hourly with GitHub Actions.
 
 ## Example configuration with composer
 
@@ -16,19 +16,30 @@ This example adds all translations from finnish and french packages.
     "repositories": [
         {
             "type": "composer",
-            "url": "https://wp-languages.github.io"
+            "url": "https://wp-languages.github.io",
+            "only": [
+                "koodimonni-language/*",
+                "koodimonni-plugin-language/*",
+                "koodimonni-theme-language/*"
+            ]
         }
     ],
     "require": {
-      "koodimonni-language/fi": "*",
-      "koodimonni-language/fr_FR": "*"
+        "koodimonni-language/fi": "*",
+        "koodimonni-language/fr_FR": "*"
     },
     "extra": {
-      "dropin-paths": {
-        "htdocs/wp-content/languages/": ["vendor:koodimonni-language"],
-        "htdocs/wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
-        "htdocs/wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
-      }
+        "dropin-paths": {
+            "htdocs/wp-content/languages/": [
+                "vendor:koodimonni-language"
+            ],
+            "htdocs/wp-content/languages/plugins/": [
+                "vendor:koodimonni-plugin-language"
+            ],
+            "htdocs/wp-content/languages/themes/": [
+                "vendor:koodimonni-theme-language"
+            ]
+        }
     }
 }
 ```
@@ -40,10 +51,10 @@ If package what you're looking for can't be found look first the response from a
 
 If your language is not listed in the response we can't help you. You'll need to ask from wp-core translators instead.
 
-This is pretty static repository and we can't add all possible plugins here.
+This is pretty static repository, and we can't add all possible plugins here.
 
 ## Manually adding any language zip to your composer.json
-There's also manual method of including any translation in wordpress.org. This is useful because we can't include all plugins in this repository. Let's look how to add french (fr_FR) jetpack translations. First search the api for jetpack translations:
+There's also manual method of including any translation in WordPress.org. This is useful because we can't include all plugins in this repository. Let's look how to add french (fr_FR) jetpack translations. First search the api for jetpack translations:
 
 ```bash
 $ curl -s 'https://api.wordpress.org/translations/plugins/1.0/?slug=jetpack' | python -m json.tool
@@ -75,27 +86,34 @@ Then add it to your composer like this example. You just need to update the vers
         "koodimonni-plugin-language/jetpack-fr_FR": ">=3.9.2"
     },
     "extra": {
-      "dropin-paths": {
-        "htdocs/wp-content/languages/": ["vendor:koodimonni-language"],
-        "htdocs/wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
-        "htdocs/wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
-      }
+        "dropin-paths": {
+            "htdocs/wp-content/languages/": [
+                "vendor:koodimonni-language"
+            ],
+            "htdocs/wp-content/languages/plugins/": [
+                "vendor:koodimonni-plugin-language"
+            ],
+            "htdocs/wp-content/languages/themes/": [
+                "vendor:koodimonni-theme-language"
+            ]
+        }
     }
 }
 ```
 
 ## How to use this project as self-hosted version:
 
-```
+```bash
 # Clone the project to your own server
-$ git clone https://github.com/wp-languages/wp-languages.github.io /to/your/htdocs
-$ cd /to/your/htdocs
-$ composer install
+git clone https://github.com/wp-languages/wp-languages.github.io /to/your/htdocs
+cd /to/your/htdocs
+composer install
 
 # Set new cronjob
-$ crontab -e
+crontab -e
+
 # Add following line to your cron
-*/30 * * * * cd /to/your/htdocs && php bin/wp-org-api && php bin/satis satis.json .
+0 */2 * * * cd /to/your/htdocs && composer run-script cache-build
 ```
 
 ## License

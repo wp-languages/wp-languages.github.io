@@ -1,204 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>{{ name }} Composer Repository</title>
-    <style type="text/css">
-    {% include 'styles.css' %}
-    </style>
+    <title>WordPress Language Packs Composer Repository</title>
+    <style>{% include 'styles.css' %}</style>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    {% include 'ga.js' %}
 
-      ga('create', 'UA-53312302-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <script>
     /* If we are in github.io redirect to https */
-    if (window.location.host.substr(-10) == '.github.io' && window.location.protocol != 'https:') {
+    if ( window.location.host.substr( -10 ) === '.github.io' && window.location.protocol !== 'https:' ) {
         window.location.protocol = 'https:';
     }
     </script>
 </head>
 <body>
 
-    <div id="doc" class="yui-t7">
-        <div id="hd">
-            <h1>Composer WordPress language packs <br>by Koodimonni</h1>
-            <a href="http://koodimonni.fi"><img class="logo" src="https://cdn.koodimonni.fi/koodimonni-logo.svg" alt="Koodimonni logo"></a>
-            <p>Recent WordPress translations as Composer packages.</p>
-            <p>This is composer compatible wrapper for <a href="http://codex.wordpress.org/WordPress.org_API">api.wordpress.org</a>.</p>
-            <p>a Cronjob in my server asks changes from wordpress.org every 30-minutes. This repo gets updated when new packages are available.</p>
-            <p>These packages use: <a href="https://packagist.org/packages/koodimonni/composer-dropin-installer">koodimonni/composer-dropin-installer</a> for installing multiple packages into same directory.</p>
-            <p>You can install as many languages as you want. Contact me when something is broken or you need an additional language-packs or if you happen to need a freelance wordpress developer: <a href="mailto:onni@koodimonni.fi">onni@koodimonni.fi</a></p>
-            <p></p>
-            <p>Source code and issue handling available in: <a href="https://github.com/wp-languages/wp-languages.github.io"> Github</a></p>
-            <p>Relevant chatting about these language packages in: <a href="https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021">Roots Discourse</a></p>
-            <div id="repos">
-                <p>The repo contains: <b>{{ packages|length }} packages </b></p>
-            </div>
-            <div id="lastupdate">
-                Last updated: <time datetime="{{ "now"|date("d/m/Y", "Europe/Helsinki") }}">{{ "now"|date(constant('\DateTime::RSS'),"Europe/Helsinki") }}</time>
-            </div>
+<div id="doc" class="yui-t7">
+    <div id="hd">
+        <h1>Composer WordPress Language Packs <br>by Koodimonni</h1>
+        <p>
+            Recent WordPress translations as Composer packages.
+        </p>
+        <p>
+            This is composer compatible wrapper for <a href="https://codex.wordpress.org/WordPress.org_API">api.wordpress.org</a>.
+        </p>
+        <p>
+            This repo gets updated when new packages are available.
+        </p>
+        <p>
+            These packages use: <a href="https://packagist.org/packages/koodimonni/composer-dropin-installer">koodimonni/composer-dropin-installer</a>
+            for installing multiple packages into same directory.
+        </p>
+        <p>
+            You can install as many languages as you want. Contact me when something is broken or you need an
+            additional language-packs or if you happen to need a freelance wordpress developer:
+            <a href="https://github.com/onnimonni">github.com/onnimonni</a>
+        </p>
+        <p></p>
+        <p>
+            Source code and issue handling available in: <a href="https://github.com/wp-languages/wp-languages.github.io">GitHub</a>
+        </p>
+        <p>
+            Relevant chatting about these language packages in:
+            <a href="https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021">Roots Discourse</a>
+        </p>
+
+        <div id="repos">
+            <p>The repo contains: <strong>{{ packages|length }} packages </strong></p>
         </div>
-        <div id="bd">
-            <div class="yui-g">
-                Adding the repository to <em>composer.json</em>:
-                <pre><code>{
+        <div id="lastupdate">
+            Last updated:
+            <time datetime="{{ "now"|date("d/m/Y", "Europe/Helsinki") }}">{{ "now"|date(constant('\DateTime::RSS'),"Europe/Helsinki") }}</time>
+        </div>
+    </div>
+
+    <div id="bd">
+        <div class="yui-g">
+            Adding the repository to <em>composer.json</em>:
+            <pre><code>{
     "repositories": [
         {
             "type": "composer",
-            "url": "{{ url }}"
+            "url": "{{ url }}",
+            "only": [
+                "koodimonni-language/*",
+                "koodimonni-plugin-language/*",
+                "koodimonni-theme-language/*"
+            ]
         }
     ],
     "require": {
-      "koodimonni-language/fi": "*",
-      "koodimonni-language/fr_FR": "*"
+        "koodimonni-language/fi": "*",
+        "koodimonni-language/fr_FR": "*"
     },
     "extra": {
-      "dropin-paths": {
-        "htdocs/wp-content/languages/": ["vendor:koodimonni-language"],
-        "htdocs/wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
-        "htdocs/wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
-      }
+        "dropin-paths": {
+            "htdocs/wp-content/languages/": ["vendor:koodimonni-language"],
+            "htdocs/wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+            "htdocs/wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
+        }
     }
 }</code></pre>
 
+            <label>
                 Filter by package name:
                 <input type="text" id="search" autocomplete="off" autofocus />
+            </label>
 
-                {% for name, package in packages %}
-                    <div>
-                        <h3 id="{{ package.highest.name }}">{{ package.highest.name }}</h3>
-                        {% if package.highest.description %}
-                            <p>{{ package.highest.description }}</p>
+            {% for name, package in packages %}
+
+                <div>
+                    <h3 id="{{ package.highest.name }}">{{ package.highest.name }}</h3>
+                    {% if package.highest.description %}
+                        <p>{{ package.highest.description }}</p>
+                    {% endif %}
+                    <table>
+                        {% if package.highest.homepage %}
+                            <tr>
+                                <th>Homepage</th>
+                                <td><a href="{{ package.highest.homepage }}">{{ package.highest.homepage }}</a></td>
+                            </tr>
                         {% endif %}
-                        <table>
-                            {% if package.highest.homepage %}
-                                <tr>
-                                    <th>Homepage</th>
-                                    <td><a href="{{ package.highest.homepage }}">{{ package.highest.homepage }}</a></td>
-                                </tr>
-                            {% endif %}
-                            {% if package.highest.type %}
-                                <tr>
-                                    <th>Type</th>
-                                    <td>{{ package.highest.type|join(', ') }}</td>
-                                </tr>
-                            {% endif %}
-                            {% if package.highest.license %}
-                                <tr>
-                                    <th>License</th>
-                                    <td>{{ package.highest.license|join(', ') }}</td>
-                                </tr>
-                            {% endif %}
-                            {% if package.highest.authors %}
-                                <tr>
-                                    <th>Authors</th>
-                                    <td>
-                                        {% for author in package.highest.authors %}
-                                            {%- if author.homepage -%}
-                                                <a href="{{ author.homepage }}">{{ author.name }}</a>
-                                            {%- else -%}
-                                                {{ author.name }}
-                                            {%- endif -%}
-                                            {%- if not loop.last -%}, {% endif -%}
-                                        {% endfor %}
-                                    </td>
-                                </tr>
-                            {% endif %}
-
-                            {% if package.highest.support %}
+                        {% if package.highest.type %}
                             <tr>
-                                <th>Support</th>
-                                <td>
-                                    <ul>
-                                    {% for support_type, support_url in package.highest.support %}
-                                        <li>{{ support_type|capitalize }}: <a href="{{ support_url }}">{{ support_url }}</a></li>
-                                    {% endfor %}
-                                    </ul>
-                                </tr>
-                            </td>
-                            {% endif %}
+                                <th>Type</th>
+                                <td>{{ package.highest.type|join(', ') }}</td>
+                            </tr>
+                        {% endif %}
+                        {% if package.highest.license %}
                             <tr>
-                                <th>Releases</th>
+                                <th>License</th>
+                                <td>{{ package.highest.license|join(', ') }}</td>
+                            </tr>
+                        {% endif %}
+                        {% if package.highest.authors %}
+                            <tr>
+                                <th>Authors</th>
                                 <td>
-                                    {% for version in package.versions %}
-                                        {%- if version.distType -%}
-                                            <a href="{{ version.distUrl }}" title="{{ version.distReference }}">{{ version.prettyVersion }}</a>
+                                    {% for author in package.highest.authors %}
+                                        {%- if author.homepage -%}
+                                            <a href="{{ author.homepage }}">{{ author.name }}</a>
                                         {%- else -%}
-                                            <a href="{{ version.sourceUrl }}" title="{{ version.sourceReference }}">{{ version.prettyVersion }}</a>
+                                            {{ author.name }}
                                         {%- endif -%}
                                         {%- if not loop.last -%}, {% endif -%}
                                     {% endfor %}
                                 </td>
                             </tr>
+                        {% endif %}
+
+                        {% if package.highest.support %}
                             <tr>
-                                <th>Required by</th>
+                                <th>Support</th>
                                 <td>
-                                    {% set package_dependencies = attribute(dependencies, name) %}
-                                    {% if package_dependencies|length %}
-                                        <ul>
-                                            {% for dependency in package_dependencies %}
-                                                <li><a href="#{{ dependency }}">{{ dependency }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
+                                    <ul>
+                                        {% for support_type, support_url in package.highest.support %}
+                                            <li>{{ support_type|capitalize }}: <a href="{{ support_url }}">{{ support_url }}</a></li>
+                                        {% endfor %}
+                                    </ul>
                                 </td>
                             </tr>
-                        </table>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div id="ft">
-            <p><small>This Composer Repository is proudly powered by <a href="https://github.com/composer/satis">Satis</a> {{ constant('Composer\\Satis\\Satis::VERSION') }} - Last updated:  {{ "now"|date(constant('\DateTime::ISO8601'),"Europe/Helsinki") }}</small></p>
+                        {% endif %}
+                        <tr>
+                            <th>Releases</th>
+                            <td>
+                                {% for version in package.versions %}
+                                    {%- if version.distType -%}
+                                        <a href="{{ version.distUrl }}" title="{{ version.distReference }}">{{ version.prettyVersion }}</a>
+                                    {%- else -%}
+                                        <a href="{{ version.sourceUrl }}" title="{{ version.sourceReference }}">{{ version.prettyVersion }}</a>
+                                    {%- endif -%}
+                                    {%- if not loop.last -%}, {% endif -%}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Required by</th>
+                            <td>
+                                {% set package_dependencies = attribute(dependencies, name) %}
+                                {% if package_dependencies|length %}
+                                    <ul>
+                                        {% for dependency in package_dependencies %}
+                                            <li><a href="#{{ dependency }}">{{ dependency }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            {% endfor %}
+
         </div>
     </div>
+    <div id="ft">
+        <p>
+            <small>
+                This Composer Repository is proudly powered by <a href="https://github.com/composer/satis">Satis</a> -
+                Last updated: {{ "now"|date(constant('\DateTime::ISO8601'),"Europe/Helsinki") }}
+            </small>
+        </p>
+    </div>
+</div>
 
-    <script>
-    {% include 'jquery-2.0.0.js' %}
-    {% include 'moment-2.4.0.js' %}
-    $(function(){
-        var packages = $('h3');
-        var timer;
-        $('input#search').keyup(function(){
-            clearTimeout(timer);
-            var ms = 350; // milliseconds
-            var needle = $(this).val().toLowerCase(), show;
-            timer = setTimeout(function() {
-                packages.each(function(){
-                    show = $(this).text().toLowerCase().indexOf(needle) != -1;
-                    $(this).parent().toggle(show);
-                });
-            }, ms);
-        }).focus();
-        $('input#search').change(function(){
-            window.location.hash = "!/" + $(this).val().toLowerCase();
-        });
-        $(window).on("hashchange", function() {
-            var $input = $('input#search');
-            if (window.location.hash.indexOf("#!/") == 0) {
-                $input.val(window.location.hash.replace(/#!\//,"").toLowerCase());
-                $input.trigger("keyup");
-            } else {
-                var $anchor = $("h3[id='"+window.location.hash.replace(/^#/,"")+"']");
-                if ($anchor.length != $anchor.filter(":visible").length) {
-                    $input.val("").trigger("keyup");
-                    $anchor.get(0).scrollIntoView();
-                }
-            }
-        });
-        $(window).trigger("hashchange");
-        var $lastUpdate = $('#lastupdate time');
-        function updateDate() {
-            $lastUpdate.text(moment('{{ "now"|date(constant('\DateTime::ISO8601'),"Europe/Helsinki") }}').fromNow());
-        }
-        setInterval(updateDate, 5000);
-        updateDate();
-    });
-    </script>
+<script>
+{% include 'jquery-2.0.0.js' %}
+{% include 'moment-2.4.0.js' %}
+{% include 'footer.js' %}
+
+var $lastUpdate = $( '#lastupdate time' );
+
+function updateDate() {
+    $lastUpdate.text( moment( '{{ "now"|date(constant('\DateTime::ISO8601'),"Europe/Helsinki") }}' ).fromNow() );
+}
+
+setInterval( updateDate, 5000 );
+updateDate();
+</script>
 </body>
 </html>

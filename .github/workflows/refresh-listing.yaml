@@ -1,0 +1,57 @@
+name: "Refresh Composer Packages Listing"
+on:
+  schedule:
+    - cron: "0 * * * *"
+  push:
+
+jobs:
+  refresh-listing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+      - run: |
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+          git config user.email "wp-language-bot@keksi.io"
+          git config user.name "WP-Languages bot"
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: /tmp/cache-composer
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+
+      - name: Cache WordPress.org API Payloads
+        uses: actions/cache@v2
+        with:
+          path: ./cache
+          key: ${{ runner.os }}-packages-${{ hashFiles('**/config/wp-packages.json') }}
+
+      - name: Install dependencies
+        uses: php-actions/composer@v5
+
+      - name: Cache and Build the Repository
+        uses: php-actions/composer@v6
+        with:
+          command: run-script cache-build
+
+      - name: Commit files
+        run: |
+          git config user.email "wp-language-bot@keksi.io"
+          git config user.name "WP-Languages bot"
+          git commit -m "Cached and build" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

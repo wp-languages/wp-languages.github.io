@@ -30,8 +30,7 @@ input#search { font-size: 20px; margin: 5px 0; padding: 4px 5px; width: 100%; bo
 a {color: rgb(254,174,23); text-decoration: none;}
 
 .logo {
-  margin: 0 auto;
   display: block;
   max-height: 100px;
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
 }
