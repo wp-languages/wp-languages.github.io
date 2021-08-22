@@ -1,7 +1,0 @@
-language: php
-sudo: false
-
-# Black builds from this branch
-branches:
-  except:
-  - master
