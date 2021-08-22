@@ -1,7 +1,14 @@
 {
     "name": "wp-languages/wp-languages.github.io",
     "description": "Composer language packs for WordPress translations. This includes translations for core and official themes and few plugins.",
-    "keywords": ["package", "repository", "generator", "wordpress", "languages", "gh-pages"],
+    "keywords": [
+        "package",
+        "repository",
+        "generator",
+        "wordpress",
+        "languages",
+        "gh-pages"
+    ],
     "homepage": "https://wp-languages.github.io/",
     "issues": "https://github.com/wp-languages/wp-languages.github.io/issues",
     "forum": "https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021",
@@ -18,12 +25,22 @@
         }
     ],
     "scripts": {
-        "run-all": ["@cleanup", "@cache", "@build"],
-        "cache-build": ["@cache", "@build"],
+        "run-all": [
+            "@cleanup",
+            "@cache",
+            "@build"
+        ],
+        "cache-build": [
+            "@cache",
+            "@build"
+        ],
         "cleanup": "rm ./cache/*.json",
-        "cache": "./bin/cache",
+        "cache": "@php ./bin/cache",
         "build": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./docs/"
     },
+    "bin": [
+        "bin/cache"
+    ],
     "require": {
         "php": ">=7.3||>=8",
         "composer/satis": "^1.0",
