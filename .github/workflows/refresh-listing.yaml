@@ -45,9 +45,11 @@ jobs:
             echo "No changes to commit"
           else
             mv ./docs/index.html /tmp/index.html
-            rm -rf * .gi* .editorconfig
+            mv ./.gitignore /tmp/gitignore
+            rm -rf cache config src views .github .git .editorconfig
             git init .
             git remote add origin "https://github.com/${{ github.repository }}.git"
+            mv /tmp/gitignore ./.gitignore
             mv /tmp/index.html ./index.html
             git commit -a -m "Automated build"
           fi
