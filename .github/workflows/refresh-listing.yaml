@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
-      - run: |
+        run: |
           git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
           git config user.email "wp-language-bot@keksi.io"
           git config user.name "WP-Languages bot"
@@ -18,7 +18,7 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v2
         with:
-          path: /tmp/cache-composer
+          path: /tmp/composer-cache
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
 
       - name: Cache WordPress.org API Payloads
@@ -46,15 +46,16 @@ jobs:
           else
             mv ./docs/index.html /tmp/index.html
             mv ./.gitignore /tmp/gitignore
-            rm -rf cache config src views .github .git .editorconfig
             git init .
-            git branch -m master
+            echo "*" >> './.gitignore'
+            echo "!index.html" >> './.gitignore'
+            git add .gitignore index.html
             git config user.email "wp-language-bot@keksi.io"
             git config user.name "WP-Languages bot"
             git remote add origin "https://github.com/${{ github.repository }}.git"
             mv /tmp/gitignore ./.gitignore
             mv /tmp/index.html ./index.html
-            git commit -a -m "Automated build"
+            git commit -A -m "Automated build"
           fi
 
       - name: Push changes
