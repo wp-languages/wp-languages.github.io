@@ -10,7 +10,7 @@ on:
 
 jobs:
   setup:
-    name: Setup
+    name: Setup, Build and Publish
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
@@ -24,11 +24,6 @@ jobs:
           git config user.email "wp-language-bot@keksi.io"
           git config user.name "WP-Languages bot"
 
-  refresh-listing:
-    name: Refresh Package Listing
-    needs: [ setup ]
-    runs-on: ubuntu-latest
-    steps:
       - name: Cache Composer Dependencies
         uses: actions/cache@v2
         with:
@@ -52,11 +47,6 @@ jobs:
         with:
           command: run-script cache-build
 
-  publish:
-    name: Publish package listing
-    needs: [ refresh-listing ]
-    runs-on: ubuntu-latest
-    steps:
       - name: Prepare our repository for publishing
         run: |
           git add -A
@@ -84,7 +74,7 @@ jobs:
 
   cleanup:
     if: always()
-    needs: [ refresh-listing, publish ]
+    needs: [ setup ]
     name: Clean old actions/composer packages
     runs-on: ubuntu-latest
     steps:
