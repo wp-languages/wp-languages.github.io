@@ -1,27 +1,38 @@
 name: "Refresh Composer Packages Listing"
+
 on:
   schedule:
-    - cron: "0/30 * * * *"
+    - cron: "0/30 * * * *" # Runs on default branch
   push:
+    branches:
+      - src
 
 jobs:
-  refresh-listing:
+  setup:
+    name: Setup
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
 
-      - name: "Setup Git for later"
+      - name: Setup Git for later
         run: |
           git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
           git config user.email "wp-language-bot@keksi.io"
           git config user.name "WP-Languages bot"
 
-      - name: Cache Composer dependencies
+  refresh-listing:
+    name: Refresh Package Listing
+    needs: [setup]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cache Composer Dependencies
         uses: actions/cache@v2
         with:
           path: /tmp/composer-cache
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       - name: Cache WordPress.org API Payloads
         uses: actions/cache@v2
@@ -29,7 +40,7 @@ jobs:
           path: ./cache
           key: ${{ runner.os }}-packages-${{ hashFiles('**/config/wp-packages.json') }}
 
-      - name: Install dependencies
+      - name: Install Composer Dependencies
         uses: php-actions/composer@v6
         with:
           php_version: 7.4
@@ -40,7 +51,12 @@ jobs:
         with:
           command: run-script cache-build
 
-      - name: Commit files
+  publish:
+    name: Publish package listing
+    needs: [ refresh-listing ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare our repository for publishing
         run: |
           git add -A
           if [ -z "$(git status --porcelain)" ]; then
@@ -58,13 +74,20 @@ jobs:
             git commit -a -m "Automated build"
           fi
 
-      - name: Push changes
+      - name: Publish changes to master branch
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
           force: true
 
-      - uses: actions/delete-package-versions@v1
+  cleanup:
+    if: always()
+    needs: [ refresh-listing, publish ]
+    name: Clean old actions/composer packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete old actions/composer packages
+        uses: actions/delete-package-versions@v1
         with:
           package-name: 'php-actions_composer_wp-languages.github.io'
