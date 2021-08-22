@@ -55,7 +55,7 @@ jobs:
             git config user.email "wp-language-bot@keksi.io"
             git config user.name "WP-Languages bot"
             git remote add origin "https://github.com/${{ github.repository }}.git"
-            git commit -A -m "Automated build"
+            git commit -a -m "Automated build"
           fi
 
       - name: Push changes
