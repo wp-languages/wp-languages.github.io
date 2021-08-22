@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
+
+      - name: "Setup Git for later"
         run: |
           git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
           git config user.email "wp-language-bot@keksi.io"
