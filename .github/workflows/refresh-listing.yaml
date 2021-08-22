@@ -51,7 +51,7 @@ jobs:
             git init .
             echo "*" >> './.gitignore'
             echo "!index.html" >> './.gitignore'
-            git add .gitignore index.html
+            git add -f .gitignore index.html
             git config user.email "wp-language-bot@keksi.io"
             git config user.name "WP-Languages bot"
             git remote add origin "https://github.com/${{ github.repository }}.git"
