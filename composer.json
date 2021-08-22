@@ -21,7 +21,7 @@
         "run-all": ["@cleanup", "@cache", "@build"],
         "cache-build": ["@cache", "@build"],
         "cleanup": "rm ./cache/*.json",
-        "cache": "bin/cache",
+        "cache": "./bin/cache",
         "build": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./docs/"
     },
     "require": {
