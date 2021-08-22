@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Git Checkout
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - run: |
           git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
           git config user.email "wp-language-bot@keksi.io"
@@ -42,13 +40,25 @@ jobs:
 
       - name: Commit files
         run: |
-          git config user.email "wp-language-bot@keksi.io"
-          git config user.name "WP-Languages bot"
-          git commit -m "Cached and build" -a
+          git add -A
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit"
+          else
+            mv ./docs/index.html /tmp/index.html
+            rm -rf * .gi* .editorconfig
+            git init .
+            git remote add origin "https://github.com/${{ github.repository }}.git"
+            mv /tmp/index.html ./index.html
+            git commit -a -m "Automated build"
+          fi
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          directory: docs
           branch: master
           force: true
+
+      - uses: actions/delete-package-versions@v1
+        with:
+          package-name: 'php-actions_composer_wp-languages.github.io'
