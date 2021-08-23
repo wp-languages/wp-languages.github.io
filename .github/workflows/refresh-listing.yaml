@@ -2,7 +2,7 @@ name: "Refresh Composer Packages Listing"
 
 on:
   schedule:
-    - cron: "0/30 * * * *" # Runs on default branch
+    - cron: '15 * * * *' # Runs only on default branch
   push:
     branches:
       - src
