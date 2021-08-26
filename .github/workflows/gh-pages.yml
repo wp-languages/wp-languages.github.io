@@ -3,10 +3,8 @@ name: Build Github Pages
 on:
   push:
     branches: [ "src" ]
-
   schedule:
     - cron: "42 * * * *" # Every hour
-  workflow_dispatch:
 
 jobs:
   build:
