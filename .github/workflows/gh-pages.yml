@@ -52,6 +52,8 @@ jobs:
           echo "Adding CNAME: $SITE_DOMAIN"
           echo $SITE_DOMAIN > _site/CNAME
         fi
+      env:
+        SITE_DOMAIN: ${{ secrets.SITE_DOMAIN }}
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.1
