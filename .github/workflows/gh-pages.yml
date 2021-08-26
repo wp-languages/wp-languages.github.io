@@ -34,6 +34,9 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
+    - name: Install dependencies
+      run: composer install
+
     - name: Build satis repository
       shell: bash
       run: |
