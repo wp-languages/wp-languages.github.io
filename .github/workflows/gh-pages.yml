@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "src" ]
   schedule:
-    - cron: "42 * * * *" # Every hour
+    - cron: "*/5 * * * *" # Every hour
 
 jobs:
   build:
