@@ -4,6 +4,10 @@ on:
   push:
     branches: [ "src" ]
 
+  schedule:
+    - cron: "42 * * * *" # Every hour
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -20,7 +24,7 @@ jobs:
         tools: composer:v1
 
     - name: Pin Composer
-      run: composer self-update 1.10.21
+      run: composer self-update 1.10.22 # makes sure new Github tokes work
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -40,10 +44,11 @@ jobs:
     - name: Build satis repository
       shell: bash
       run: |
-        # Updates contents of satis.json
+        # Build repository contents with satis
         php bin/wp-org-api
         php bin/satis build satis.json _site
         cp _config/README.md _site/README.md
+
         # Add CNAME for the site
         if [ "$SITE_DOMAIN" != "" ]; then
           echo "Adding CNAME: $SITE_DOMAIN"
@@ -53,5 +58,5 @@ jobs:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
-        branch: gh-pages
+        branch: master
         folder: _site/
