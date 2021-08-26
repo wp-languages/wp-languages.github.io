@@ -34,8 +34,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
-    - name: Install dependencies
-      run: composer install
+    - name: Composer Install dependencies
+      run: composer install --no-dev --no-interaction
 
     - name: Build satis repository
       shell: bash
@@ -44,9 +44,11 @@ jobs:
         php bin/wp-org-api
         php bin/satis build satis.json _site
         cp _config/README.md _site/README.md
-
-    - name: Composer Install dependencies
-      run: composer install --no-dev --no-interaction
+        # Add CNAME for the site
+        if [ "$SITE_DOMAIN" != "" ]; then
+          echo "Adding CNAME: $SITE_DOMAIN"
+          echo $SITE_DOMAIN > _site/CNAME
+        fi
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.1
