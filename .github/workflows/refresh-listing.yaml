@@ -3,10 +3,6 @@ name: "Refresh Composer Packages Listing"
 on:
   schedule:
     - cron: '15 * * * *' # Runs only on default branch
-  push:
-    branches:
-      - src
-      - upgrade # should be removed after merging
 
 jobs:
   setup:
@@ -58,11 +54,11 @@ jobs:
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes to commit"
           else
-            mv ./docs/index.html ./index.html
+            mv ./docs/* .
             rm -rf .git
             git init .
             echo "*" >> './.gitignore'
-            echo "!index.html" >> './.gitignore'
+            echo "!index.html\n!include/*\n!packages.json" >> './.gitignore'
             git add -f .gitignore index.html
             git config user.email "wp-language-bot@keksi.io"
             git config user.name "WP-Languages bot"
