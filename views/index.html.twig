@@ -15,49 +15,52 @@
 </head>
 <body>
 
-<div id="doc" class="yui-t7">
-    <div id="hd">
-        <h1>Composer WordPress Language Packs <br>by Koodimonni</h1>
+<div id="doc" class="yui-t7 m-1-0">
+    <div id="hd" class="m-1-0 t-c">
+        <h1>Composer WordPress Language Packs</h1>
+
         <p>
-            Recent WordPress translations as Composer packages.
-        </p>
-        <p>
+            WordPress translations as Composer packages.<br>
             This is composer compatible wrapper for <a href="https://codex.wordpress.org/WordPress.org_API">api.wordpress.org</a>.
         </p>
-        <p>
-            This repo gets updated when new packages are available.
+
+        <p class="m-1-0 t-c">
+            <a href="https://github.com/wp-languages/wp-languages.github.io/stargazers/" target="_blank">
+                <img src="https://img.shields.io/github/stars/wp-languages/wp-languages.github.io.svg?style=social&label=Star&maxAge=2592000"
+                     alt="GitHub Stars">
+            </a>
+
+            <a href="https://github.com/wp-languages/wp-languages.github.io/graphs/contributors/" target="_blank">
+                <img src="https://img.shields.io/github/contributors/wp-languages/wp-languages.github.io.svg" alt="GitHub Contributors">
+            </a>
+
+            <a href="https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021" target="_blank">
+                <img src="https://img.shields.io/badge/chat-discourse.roots.io-informational" alt="Chat in discourse.roots.io">
+            </a>
+
+            <a href="https://mit-license.org/" target="_blank">
+                <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT Licensed">
+            </a>
         </p>
-        <p>
-            These packages use: <a href="https://packagist.org/packages/koodimonni/composer-dropin-installer">koodimonni/composer-dropin-installer</a>
+
+        <hr class="m-1-0">
+
+        <p class="m-1-0">
+            These packages use
+            <a href="https://packagist.org/packages/koodimonni/composer-dropin-installer" target="_blank">koodimonni/composer-dropin-installer</a>
+            <img src="https://img.shields.io/packagist/dt/koodimonni/composer-dropin-installer" alt="Packagist downloads total">
             for installing multiple packages into same directory.
         </p>
-        <p>
-            You can install as many languages as you want. Contact me when something is broken or you need an
-            additional language-packs or if you happen to need a freelance wordpress developer:
-            <a href="https://github.com/onnimonni">github.com/onnimonni</a>
-        </p>
-        <p></p>
-        <p>
-            Source code and issue handling available in: <a href="https://github.com/wp-languages/wp-languages.github.io">GitHub</a>
-        </p>
-        <p>
-            Relevant chatting about these language packages in:
-            <a href="https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021">Roots Discourse</a>
-        </p>
-
-        <div id="repos">
-            <p>The repo contains: <strong>{{ packages|length }} packages </strong></p>
-        </div>
-        <div id="lastupdate">
-            Last updated:
-            <time datetime="{{ "now"|date("d/m/Y", "Europe/Helsinki") }}">{{ "now"|date(constant('\DateTime::RSS'),"Europe/Helsinki") }}</time>
-        </div>
     </div>
 
+    <hr class="m-1-0">
+
     <div id="bd">
+        <h2>How to use</h2>
+
         <div class="yui-g">
-            Adding the repository to <em>composer.json</em>:
-            <pre><code>{
+            Add the following configurations to the <em>composer.json</em>:
+            <pre class="m-1-0"><code>{
     "repositories": [
         {
             "type": "composer",
@@ -82,94 +85,29 @@
     }
 }</code></pre>
 
-            <label>
+            <hr class="m-1-0">
+
+            <h2>Packages</h2>
+
+            <div class="stats m-1-0">
+                <div id="repos">
+                    <p>The repo contains: <strong>{{ packages|length }} packages</strong>.</p>
+                </div>
+                <div id="lastupdate">
+                    Last updated:
+                    <time class="s" datetime="{{ "now"|date("d/m/Y", "Europe/Helsinki") }}" title="{{ "now"|date(constant('\DateTime::RSS'), "Europe/Helsinki") }}">
+                        {{ "now"|date(constant('\DateTime::RSS'),"Europe/Helsinki") }}
+                    </time>
+                </div>
+            </div>
+
+            <label class="filter">
                 Filter by package name:
-                <input type="text" id="search" autocomplete="off" autofocus />
+                <input type="search" id="search" autocomplete="off" autofocus />
             </label>
 
             {% for name, package in packages %}
-
-                <div>
-                    <h3 id="{{ package.highest.name }}">{{ package.highest.name }}</h3>
-                    {% if package.highest.description %}
-                        <p>{{ package.highest.description }}</p>
-                    {% endif %}
-                    <table>
-                        {% if package.highest.homepage %}
-                            <tr>
-                                <th>Homepage</th>
-                                <td><a href="{{ package.highest.homepage }}">{{ package.highest.homepage }}</a></td>
-                            </tr>
-                        {% endif %}
-                        {% if package.highest.type %}
-                            <tr>
-                                <th>Type</th>
-                                <td>{{ package.highest.type|join(', ') }}</td>
-                            </tr>
-                        {% endif %}
-                        {% if package.highest.license %}
-                            <tr>
-                                <th>License</th>
-                                <td>{{ package.highest.license|join(', ') }}</td>
-                            </tr>
-                        {% endif %}
-                        {% if package.highest.authors %}
-                            <tr>
-                                <th>Authors</th>
-                                <td>
-                                    {% for author in package.highest.authors %}
-                                        {%- if author.homepage -%}
-                                            <a href="{{ author.homepage }}">{{ author.name }}</a>
-                                        {%- else -%}
-                                            {{ author.name }}
-                                        {%- endif -%}
-                                        {%- if not loop.last -%}, {% endif -%}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                        {% endif %}
-
-                        {% if package.highest.support %}
-                            <tr>
-                                <th>Support</th>
-                                <td>
-                                    <ul>
-                                        {% for support_type, support_url in package.highest.support %}
-                                            <li>{{ support_type|capitalize }}: <a href="{{ support_url }}">{{ support_url }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </td>
-                            </tr>
-                        {% endif %}
-                        <tr>
-                            <th>Releases</th>
-                            <td>
-                                {% for version in package.versions %}
-                                    {%- if version.distType -%}
-                                        <a href="{{ version.distUrl }}" title="{{ version.distReference }}">{{ version.prettyVersion }}</a>
-                                    {%- else -%}
-                                        <a href="{{ version.sourceUrl }}" title="{{ version.sourceReference }}">{{ version.prettyVersion }}</a>
-                                    {%- endif -%}
-                                    {%- if not loop.last -%}, {% endif -%}
-                                {% endfor %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Required by</th>
-                            <td>
-                                {% set package_dependencies = attribute(dependencies, name) %}
-                                {% if package_dependencies|length %}
-                                    <ul>
-                                        {% for dependency in package_dependencies %}
-                                            <li><a href="#{{ dependency }}">{{ dependency }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
+                {% include 'package.html.twig' %}
             {% endfor %}
 
         </div>

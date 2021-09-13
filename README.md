@@ -1,5 +1,5 @@
 # wp-languages.github.io
-[![Build Status](https://travis-ci.org/wp-languages/wp-languages.github.io.svg?branch=src)](https://travis-ci.org/wp-languages/wp-languages.github.io) [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 ## Features
 - Supports **https** by using github.io ssl. Composer default configuration only accepts **https** by default starting from 2016.
