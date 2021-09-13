@@ -24,11 +24,16 @@ jobs:
           git config user.email "wp-language-bot@keksi.io"
           git config user.name "WP-Languages bot"
 
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
       - name: Cache Composer Dependencies
         uses: actions/cache@v2
         with:
-          path: /tmp/composer-cache
-          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
 
       - name: Cache WordPress.org API Payloads
         uses: actions/cache@v2
