@@ -230,20 +230,21 @@ function build_package( $vendor, $name, $lang, $version, $package, $description 
     return [
         'type'    => 'package',
         'package' => [
-            'name'     => sprintf(
+            'name'        => sprintf(
                 '%s/%s-%s',
                 $vendor,
                 $name,
                 $lang,
             ),
-            'type'     => 'wordpress-language',
-            'keywords' => [ 'WordPress', 'Translation', $name, $lang ],
-            'version'  => $version,
-            'dist'     => [
+            'type'        => 'wordpress-language',
+            'keywords'    => [ 'WordPress', 'Translation', $name, $lang ],
+            'description' => $description,
+            'version'     => $version,
+            'dist'        => [
                 'url'  => $package,
                 'type' => get_file_extension( $package ),
             ],
-            'require'  => [
+            'require'     => [
                 'koodimonni/composer-dropin-installer' => '>=0.2.3',
             ],
         ],

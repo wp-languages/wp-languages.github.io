@@ -502,9 +502,7 @@ foreach ( $core as $language => $versions ) {
         $package = build_package( '', '', $language, $version, $dist['dist'], $description );
 
         $package['package']['name']     = sprintf( 'koodimonni-language/%s', $language );
-        $package['package']['keywords'] = [
-            'WordPress', 'Translation', 'Full-Package', $language, $lang_name,
-        ];
+        $package['package']['keywords'] = [ 'WordPress', 'Translation', 'Full-Package', $language, $lang_name ];
         $package['package']['require']  = $required;
 
         $repositories[] = $package;
