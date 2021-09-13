@@ -41,7 +41,7 @@ $packages = [
 /**
  * Get All Available WordPress Versions
  */
-if ( should_refresh_cache( $cache_file_versions, DAY_IN_SECONDS ) ) {
+if ( should_refresh_cache( $cache_file_versions, HOUR_IN_SECONDS * 3 ) ) {
     msg( 'Caching versions: ' . $cache_file_versions );
 
     // Get available WordPress versions
@@ -51,7 +51,7 @@ if ( should_refresh_cache( $cache_file_versions, DAY_IN_SECONDS ) ) {
                 return [ $item => $key ];
             } );
 
-        // Latest version we use to get the available languages
+        // Latest version to get the available languages
         $latest = $wp_versions->get( 'latest' )->first();
         // Versions we still fetch
         $outdated = $wp_versions->get( 'outdated' )->values();
@@ -76,7 +76,7 @@ if ( ! file_exists( $cache_file_versions ) ) {
 /**
  * Get available languages and latest version translations.
  */
-if ( should_refresh_cache( $config_languages, DAY_IN_SECONDS ) ) {
+if ( should_refresh_cache( $config_languages, HOUR_IN_SECONDS * 3 ) ) {
     msg( 'Caching languages: ' . $config_languages );
 
     $wp_versions = get_cached( $cache_file_versions );
@@ -110,7 +110,7 @@ if ( should_refresh_cache( $config_languages, DAY_IN_SECONDS ) ) {
 /**
  * Get all themes from specified author
  */
-if ( should_refresh_cache( $cache_file_core_themes, DAY_IN_SECONDS ) ) {
+if ( should_refresh_cache( $cache_file_core_themes, HOUR_IN_SECONDS * 3 ) ) {
     msg( 'Caching themes: ' . $cache_file_core_themes );
 
     try {
@@ -298,7 +298,7 @@ foreach ( $plugins as $plugin ) {
     foreach ( $plugin->versions as $version => $url ) {
         $slug = $plugin->slug;
 
-        $plugin_cache_file_name = $cache_dir . '/plugin-' . $slug . '-' . $version . '.json';
+        $plugin_cache_file_name = "$cache_dir/plugin-$slug-$version.json";
 
         if ( should_refresh_cache( $plugin_cache_file_name ) ) {
             msg( sprintf( 'Caching translations for plugin: %s (%s)', $slug, $version ) );
@@ -362,7 +362,7 @@ foreach ( $themes as $theme ) {
     }
 
     foreach ( $theme->versions as $theme_version => $theme_version_url ) {
-        $theme_cache_file_name = $cache_dir . '/theme-' . $slug . '-' . $theme_version . '.json';
+        $theme_cache_file_name = "$cache_dir/theme-$slug-$theme_version.json";
 
         if ( should_refresh_cache( $theme_cache_file_name ) ) {
             msg( sprintf( 'Caching translations for theme %s (%s)', $slug, $theme_version ) );
@@ -459,7 +459,7 @@ foreach ( $p as $type => $pkg ) {
 
 $core = $p['wordpress-language']['core'] ?? [];
 
-// Components includes all known themes and plugins by the author specified above.
+// Includes all known themes and plugins by the author specified above.
 $components = array_merge(
     array_keys( $p['wordpress-plugin-language'] ?? [] ),
     array_keys( $p['wordpress-theme-language'] ?? [] )
@@ -514,9 +514,14 @@ foreach ( $core as $language => $versions ) {
 $satis['repositories'] = $repositories;
 
 // Save the satis.json file for the next processing step.
-cache( $satis, $satis_final );
+try {
+    cache( $satis, $satis_final );
 
-// For debugging
-msg( sprintf( 'Repository count: %s', count( $satis['repositories'] ) ) );
+    // For debugging
+    msg( sprintf( 'Repository count: %s', count( $satis['repositories'] ) ) );
 
-exit( 0 ); // Clean exit we can continue from in the build process.
+    exit( 0 ); // Clean exit we can continue from in the build process.
+}
+catch ( JsonException $e ) {
+    error( $e->getMessage() );
+}
