@@ -57,7 +57,6 @@ jobs:
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes to commit"
           else
-            rm -rf .git
             cd ./docs/
             git init .
             echo "*" >> './.gitignore'
