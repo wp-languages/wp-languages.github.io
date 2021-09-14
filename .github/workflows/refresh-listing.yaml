@@ -54,12 +54,12 @@ jobs:
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes to commit"
           else
-            mv ./docs/* .
             rm -rf .git
+            cd ./docs/
             git init .
             echo "*" >> './.gitignore'
             echo "!index.html\n!include/*\n!packages.json" >> './.gitignore'
-            git add -f .gitignore index.html
+            git add -f .gitignore index.html include/* packages.json
             git config user.email "wp-language-bot@keksi.io"
             git config user.name "WP-Languages bot"
             git remote add origin "https://github.com/${{ github.repository }}.git"
@@ -70,6 +70,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: './docs'
           branch: master
           force: true
 
