@@ -55,6 +55,7 @@ jobs:
         run: |
           git config --local user.email "wp-language-bot@keksi.io"
           git config --local user.name "WP-Languages bot"
+          git rm -rf .github bin cache config src views README.md composer.*
           echo "*" > './.gitignore'
           echo "!include/\n!index.html\npackages.json" >> './.gitignore'
           git add -f include/* index.html packages.json

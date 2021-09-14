@@ -5,7 +5,7 @@
 - Supports **https** by using github.io ssl. Composer default configuration only accepts **https** by default starting from 2016.
 - Automatically creates composer packages for WordPress translations from api.wordpress.org.
 - This repo provides custom satis repository for WordPress languages. See more in [wp-languages.github.io](https://wp-languages.github.io/).
-- To add more language files please submit a pull request.
+- To add more language files please submit a pull request to the `src` branch.
 - Repos are updated hourly with GitHub Actions.
 
 ## Example configuration with composer
@@ -26,7 +26,7 @@ This example adds all translations from finnish and french packages.
     ],
     "require": {
         "koodimonni-language/fi": "*",
-        "koodimonni-language/fr_FR": "*"
+        "koodimonni-language/fr_fr": "*"
     },
     "extra": {
         "dropin-paths": {
@@ -70,7 +70,7 @@ Then add it to your composer like this example. You just need to update the vers
         {
             "type": "package",
             "package": {
-                "name": "koodimonni-plugin-language/jetpack-fr_FR",
+                "name": "koodimonni-plugin-language/jetpack-fr_fr",
                 "type": "wordpress-language",
                 "version": "3.9.2",
                 "dist": {
@@ -83,7 +83,7 @@ Then add it to your composer like this example. You just need to update the vers
     ],
     "require": {
         "koodimonni/composer-dropin-installer": "*",
-        "koodimonni-plugin-language/jetpack-fr_FR": ">=3.9.2"
+        "koodimonni-plugin-language/jetpack-fr_fr": ">=3.9.2"
     },
     "extra": {
         "dropin-paths": {
@@ -115,6 +115,8 @@ crontab -e
 # Add following line to your cron
 0 */2 * * * cd /to/your/htdocs && composer run-script cache-build
 ```
+
+And serve the generated `docs` folder.
 
 ## License
 MIT License
