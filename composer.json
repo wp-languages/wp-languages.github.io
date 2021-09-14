@@ -1,25 +1,56 @@
 {
-    "name": "koodimonni/koodimonni-languages-fi",
-    "description": "Simple Repository Generator (Satis) for wordpress translations",
-    "keywords": ["package", "repository", "generator","wordpress","languages","gh-pages"],
-    "homepage": "https://github.com/Koodimonni/koodimonni.github.io",
+    "name": "wp-languages/wp-languages.github.io",
+    "description": "Composer language packs for WordPress translations. This includes translations for core and official themes and few plugins.",
+    "keywords": [
+        "package",
+        "repository",
+        "generator",
+        "wordpress",
+        "languages",
+        "gh-pages"
+    ],
+    "homepage": "https://wp-languages.github.io/",
+    "issues": "https://github.com/wp-languages/wp-languages.github.io/issues",
+    "forum": "https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Onni Hakala",
-            "email": "onni@koodimonni.fi",
-            "homepage": "http://koodimonni.fi"
+            "homepage": "https://github.com/onnimonni"
+        },
+        {
+            "name": "Ismo Vuorinen",
+            "homepage": "https://github.com/ivuorinen"
         }
     ],
-    "bin": ["bin/satis"],
-    "require": {
-        "php": ">=5.3.2",
-        "composer/composer": "1.0.*@dev",
-        "twig/twig": "~1.7",
-        "symfony/console": "~2.1"
+    "scripts": {
+        "run-all": [
+            "@cleanup",
+            "@cache",
+            "@build"
+        ],
+        "cache-build": [
+            "@cache",
+            "@build"
+        ],
+        "cache-build-ci": [
+            "@cache",
+            "@build-ci"
+        ],
+        "cleanup": "rm ./cache/*.json",
+        "cache": "@php ./bin/cache",
+        "build": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./docs/",
+        "build-ci": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./"
     },
-    "autoload": {
-        "psr-0": { "Composer\\Satis": "src/" }
+    "bin": [
+        "bin/cache"
+    ],
+    "require": {
+        "php": ">=7.3||>=8",
+        "composer/satis": "^1.0",
+        "rmccue/requests": "^1.8",
+        "illuminate/collections": "^8.55",
+        "ext-json": "*"
     }
 }
