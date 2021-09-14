@@ -49,37 +49,21 @@ jobs:
       - name: Cache and Build the Repository
         uses: php-actions/composer@v6
         with:
-          command: run-script cache-build
+          command: run-script cache-build-ci
 
-#      - name: Prepare our repository for publishing
-#        run: |
-#          git add -A
-#          if [ -z "$(git status --porcelain)" ]; then
-#            echo "No changes to commit"
-#          else
-#            cd ./docs/
-#            git init .
-#            echo "*" >> './.gitignore'
-#            echo "!index.html\n!include/*\n!packages.json" >> './.gitignore'
-#            git add -f .gitignore index.html include/* packages.json
-#            git config user.email "wp-language-bot@keksi.io"
-#            git config user.name "WP-Languages bot"
-#            git remote add origin "https://github.com/${{ github.repository }}.git"
-#            git commit -a -m "Automated build"
-#          fi
       - name: Prepare our repository for publishing
         run: |
-          echo "*" > './.gitignore'
-          echo "!docs/\n!docs/*" >> './.gitignore'
           git config --local user.email "wp-language-bot@keksi.io"
           git config --local user.name "WP-Languages bot"
+          echo "*" > './.gitignore'
+          echo "!include/\n!index.html\npackages.json" >> './.gitignore'
+          git add -f include/* index.html packages.json
           git commit -a -m "Automated build"
 
       - name: Publish changes to master branch
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          directory: './docs'
           branch: master
           force: true
 

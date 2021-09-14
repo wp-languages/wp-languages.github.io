@@ -34,9 +34,14 @@
             "@cache",
             "@build"
         ],
+        "cache-build-ci": [
+            "@cache",
+            "@build-ci"
+        ],
         "cleanup": "rm ./cache/*.json",
         "cache": "@php ./bin/cache",
-        "build": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./docs/"
+        "build": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./docs/",
+        "build-ci": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./"
     },
     "bin": [
         "bin/cache"
