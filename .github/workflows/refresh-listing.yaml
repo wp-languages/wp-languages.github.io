@@ -3,6 +3,9 @@ name: "Refresh Composer Packages Listing"
 on:
   schedule:
     - cron: '15 * * * *' # Runs only on default branch
+  push:
+    branches:
+      - upgrade # should be removed after merging
 
 jobs:
   setup:
