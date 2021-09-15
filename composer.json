@@ -39,7 +39,10 @@
             "@build-ci"
         ],
         "cleanup": "rm ./cache/*.json",
-        "cache": "@php ./bin/cache",
+        "cache": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php ./bin/cache"
+        ],
         "build": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./docs/",
         "build-ci": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./"
     },
