@@ -234,7 +234,7 @@ if ( should_refresh_cache( $cache_file_core_plugins ) ) {
  */
 
 $wp_versions = collect( get_cached( $cache_file_versions ) )
-    ->forget( 'insecure' ) // Skip insecure versions.
+    // ->forget( 'insecure' ) // Skip insecure versions.
     ->flatten( 1 ) // Drop all version numbers to same level.
     ->sort() // Sort versions.
     ->toArray();

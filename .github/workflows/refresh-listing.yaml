@@ -3,6 +3,9 @@ name: "Refresh Composer Packages Listing"
 on:
   schedule:
     - cron: '15 * * * *' # Runs only on default branch
+  push:
+    branches:
+      - src
 
 jobs:
   setup:
@@ -30,12 +33,6 @@ jobs:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: ${{ runner.os }}-composer-
-
-      - name: Cache WordPress.org API Payloads
-        uses: actions/cache@v2
-        with:
-          path: ./cache
-          key: ${{ runner.os }}-packages-${{ hashFiles('**/config/wp-packages.json') }}
 
       - name: Install Composer Dependencies
         uses: php-actions/composer@v6
