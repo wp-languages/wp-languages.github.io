@@ -1,0 +1,62 @@
+name: Build Github Pages
+
+on:
+  push:
+    branches: [ "src" ]
+  schedule:
+    - cron: "15 12 * * *" # at 12:15
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+
+    - name: Setup PHP with composer v1
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '5.6'
+        tools: composer:v1
+
+    - name: Pin Composer
+      run: composer self-update 1.10.22 # makes sure new Github tokes work
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v2.1.6
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Composer Install dependencies
+      run: composer install --no-dev --no-interaction
+
+    - name: Build satis repository
+      shell: bash
+      run: |
+        # Build repository contents with satis
+        php bin/wp-org-api
+        php bin/satis build satis.json _site
+        cp _config/README.md _site/README.md
+
+        # Add CNAME for the site
+        if [ "$SITE_DOMAIN" != "" ]; then
+          echo "Adding CNAME: $SITE_DOMAIN"
+          echo $SITE_DOMAIN > _site/CNAME
+        fi
+      env:
+        SITE_DOMAIN: ${{ secrets.SITE_DOMAIN }}
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        branch: master
+        folder: _site/
