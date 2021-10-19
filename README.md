@@ -8,6 +8,7 @@
 - If you would like to add more language files please submit a pull request.
 - Repos are updated daily with Travis CI.
 
+
 ## Example configuration with composer
 
 This example adds all translations from finnish and french packages.
