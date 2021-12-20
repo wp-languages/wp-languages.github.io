@@ -86,7 +86,6 @@ Then add it to your composer like this example. You just need to update the vers
 ```
 
 ## How to use this project as self-hosted version:
-
 ```
 # Clone the project to your own server
 $ git clone https://github.com/wp-languages/wp-languages.github.io /to/your/htdocs
