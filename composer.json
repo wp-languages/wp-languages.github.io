@@ -38,7 +38,7 @@
             "@cache",
             "@build-ci"
         ],
-        "cleanup": "rm ./cache/*.json",
+        "cleanup": "rm -f ./cache/*.json",
         "cache": [
             "Composer\\Config::disableProcessTimeout",
             "@php ./bin/cache"
@@ -50,8 +50,8 @@
         "bin/cache"
     ],
     "require": {
-        "php": ">=7.3||>=8",
-        "composer/satis": "^1.0",
+        "php": "^7.4||^8.0||^8.1",
+        "composer/satis": "dev-main as 1.0.0",
         "rmccue/requests": "^1.8",
         "illuminate/collections": "^8.55",
         "ext-json": "*"

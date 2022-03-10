@@ -24,7 +24,7 @@ const DAY_IN_SECONDS  = HOUR_IN_SECONDS * 24;
  * @return object
  * @throws \JsonException
  */
-function req( $url = '' ) {
+function req( string $url = '' ) : object {
     $response = Requests::get( $url, [
         'Accept' => 'application/json',
         'Content-Type: application/json',
@@ -51,7 +51,7 @@ function req( $url = '' ) {
 /**
  * Is the cache still fresh enough, or should we refresh the cache.
  *
- * We shouldn't hammer the API's too much. So cache the results
+ * We shouldn't hammer the APIs too much. So cache the results,
  * and now we can run the queries as many times as we want.
  *
  * @param string $filename   Output filename.
@@ -59,7 +59,7 @@ function req( $url = '' ) {
  *
  * @return bool
  */
-function should_refresh_cache( $filename = '', $cache_time = 259200 ) {
+function should_refresh_cache( string $filename = '', int $cache_time = 259200 ) : bool {
     $filename = realpath( $filename );
     $file_age = (int) ( time() - filemtime( $filename ) );
 
@@ -75,7 +75,7 @@ function should_refresh_cache( $filename = '', $cache_time = 259200 ) {
  *
  * @return Illuminate\Support\Collection
  */
-function get_cached( $filename = '' ) {
+function get_cached( string $filename = '' ) : \Illuminate\Support\Collection {
     if ( ! file_exists( $filename ) ) {
         error( 'Could not find file: %s', [ $filename ] );
     }
@@ -109,12 +109,12 @@ function get_cached( $filename = '' ) {
  * @return bool
  * @throws \JsonException
  */
-function cache( $payload, $filename ) {
+function cache( $payload, string $filename ) : bool {
     $encoded = $payload instanceof \Illuminate\Support\Collection
         ? $payload->toJson( JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES )
         : json_encode( $payload, JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES );
 
-    // True if successful, false if couldn't save.
+    // True if successful, false if it couldn't be saved.
     return file_put_contents( $filename, $encoded ) !== false;
 }
 
@@ -125,7 +125,7 @@ function cache( $payload, $filename ) {
  *
  * @return array
  */
-function get_file( $filename = '' ) {
+function get_file( string $filename = '' ) : array {
     try {
         $data = (array) json_decode(
             file_get_contents( $filename ),
@@ -152,7 +152,7 @@ function get_file( $filename = '' ) {
  * @param string       $msg    sprintf formatted error message.
  * @param array|string $values Array of values for the sprintf placeholders.
  */
-function error( $msg = '', $values = [] ) {
+function error( string $msg = '', $values = [] ) {
     if ( ! is_array( $values ) ) {
         $values = [ $values ];
     }
@@ -166,7 +166,7 @@ function error( $msg = '', $values = [] ) {
  * @param string $msg    Message to output.
  * @param string $symbol Prefix symbol.
  */
-function msg( $msg = '', $symbol = '*' ) {
+function msg( string $msg = '', string $symbol = '*' ) {
     echo sprintf( '(%s) %s%s', $symbol, $msg, PHP_EOL );
 }
 
@@ -177,7 +177,7 @@ function msg( $msg = '', $symbol = '*' ) {
  *
  * @return false|string
  */
-function get_file_extension( $filename = '' ) {
+function get_file_extension( string $filename = '' ) {
     return substr( strrchr( $filename, '.' ), 1 );
 }
 
@@ -188,11 +188,9 @@ function get_file_extension( $filename = '' ) {
  *
  * @return string
  */
-function query_params( $query_params = [] ) {
+function query_params( array $query_params = [] ) : string {
     return collect( $query_params )
-        ->map( function ( $val = '', $key = '' ) {
-            return trim( $key . '=' . $val, " \t\n\r\0\x0B=" );
-        } )
+        ->map( fn( $val = '', $key = '' ) => trim( $key . '=' . $val, " \t\n\r\0\x0B=" ) )
         ->flatten()
         ->join( '&' );
 }
@@ -204,7 +202,7 @@ function query_params( $query_params = [] ) {
  *
  * @return string
  */
-function get_package_vendor( $type = '' ) {
+function get_package_vendor( string $type = '' ) : string {
     switch ( $type ) {
         case 'wordpress-plugin-language':
             return 'koodimonni-plugin-language';
@@ -218,15 +216,23 @@ function get_package_vendor( $type = '' ) {
 /**
  * Build Package Helper.
  *
- * @param string $vendor  Package Vendor
- * @param string $name    Package Name
- * @param string $lang    Language Code
- * @param string $version Package Version
- * @param string $package Package Download Url
+ * @param string $vendor      Package Vendor
+ * @param string $name        Package Name
+ * @param string $lang        Language Code
+ * @param string $version     Package Version
+ * @param string $package     Package Download Url
+ * @param string $description Package description.
  *
  * @return array
  */
-function build_package( $vendor, $name, $lang, $version, $package, $description ) {
+function build_package(
+    string $vendor,
+    string $name,
+    string $lang,
+    string $version,
+    string $package,
+    string $description
+) : array {
     return [
         'type'    => 'package',
         'package' => [
@@ -245,7 +251,7 @@ function build_package( $vendor, $name, $lang, $version, $package, $description 
                 'type' => get_file_extension( $package ),
             ],
             'require'     => [
-                'koodimonni/composer-dropin-installer' => '>=0.2.3',
+                'koodimonni/composer-dropin-installer' => '^1',
             ],
         ],
     ];
