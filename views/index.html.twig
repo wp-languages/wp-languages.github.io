@@ -5,6 +5,8 @@
     <title>WordPress Language Packs Composer Repository</title>
     <style>{% include 'styles.css' %}</style>
     <script>
+    {% include 'ga.js' %}
+
     /* If we are in github.io redirect to https */
     if ( window.location.host.substr( -10 ) === '.github.io' && window.location.protocol !== 'https:' ) {
         window.location.protocol = 'https:';
@@ -71,8 +73,8 @@
         }
     ],
     "require": {
-        "koodimonni-language/core-fi": "*",
-        "koodimonni-language/core-fr_fr": "*"
+        "koodimonni-language/fi": "*",
+        "koodimonni-language/fr_fr": "*"
     },
     "extra": {
         "dropin-paths": {

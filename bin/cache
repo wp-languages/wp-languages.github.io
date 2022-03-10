@@ -12,10 +12,6 @@ $query_author = 'wordpressdotorg';
 $extra_plugins = [ 'akismet', 'bbpress', 'buddypress', 'woocommerce', 'wordpress-importer' ];
 $extra_themes  = [ 'twentyseventeen', 'twentynineteen', 'twentytwenty', 'twentytwentyone' ];
 
-// Skipped themes and plugins.
-$skip_plugins = [ 'performance-lab' ];
-$skip_themes = [];
-
 // Config directory and filenames
 $config_dir       = $root . '/config';
 $config_languages = $config_dir . '/languages-info.json';
@@ -51,14 +47,16 @@ if ( should_refresh_cache( $cache_file_versions, HOUR_IN_SECONDS * 3 ) ) {
     // Get available WordPress versions
     try {
         $wp_versions = collect( req( $api_versions ) )
-            ->mapToGroups( fn( $item, $key ) => [ $item => $key ] );
+            ->mapToGroups( function ( $item, $key ) {
+                return [ $item => $key ];
+            } );
 
         // Latest version to get the available languages
         $latest = $wp_versions->get( 'latest' )->first();
         // Versions we still fetch
-        $outdated = collect($wp_versions->get( 'outdated' ))->reverse()->take(25)->values();
+        $outdated = $wp_versions->get( 'outdated' )->values();
         // Versions we drop from the repository to save time
-        $insecure = collect($wp_versions->get( 'insecure' ))->reverse()->take(14)->values();
+        $insecure = $wp_versions->get( 'insecure' )->values();
 
         cache( [
             'outdated' => $outdated,
@@ -160,13 +158,15 @@ if ( should_refresh_cache( $cache_file_core_themes, HOUR_IN_SECONDS * 3 ) ) {
         }
 
         $themes = collect( $themes )
-            ->mapWithKeys( fn( $theme ) => [
-                $theme->slug => [
-                    'name'     => $theme->name,
-                    'slug'     => $theme->slug,
-                    'versions' => collect($theme->versions)->sortKeysDesc()->take( 20 ),
-                ],
-            ] );
+            ->mapWithKeys( function ( $theme ) {
+                return [
+                    $theme->slug => [
+                        'name'     => $theme->name,
+                        'slug'     => $theme->slug,
+                        'versions' => $theme->versions,
+                    ],
+                ];
+            } );
 
         cache( [ 'themes' => $themes ], $cache_file_core_themes );
     }
@@ -212,13 +212,15 @@ if ( should_refresh_cache( $cache_file_core_plugins ) ) {
         }
 
         $plugins = collect( $plugins )
-            ->map( fn( $plugin ) => [
-                $plugin->slug => [
-                    'name'     => $plugin->name,
-                    'slug'     => $plugin->slug,
-                    'versions' => collect($plugin->versions)->sortKeysDesc()->take( 20 ),
-                ],
-            ] );
+            ->map( function ( $plugin ) {
+                return [
+                    $plugin->slug => [
+                        'name'     => $plugin->name,
+                        'slug'     => $plugin->slug,
+                        'versions' => $plugin->versions,
+                    ],
+                ];
+            } );
 
         cache( [ 'plugins' => $plugins ], $cache_file_core_plugins );
     }
@@ -288,10 +290,6 @@ $plugins = collect( get_cached( $cache_file_core_plugins )->get( 'plugins', [] )
 foreach ( $plugins as $plugin ) {
     $plugin = (object) collect( $plugin )->toArray();
 
-    if ( \in_array( $plugin->slug, $skip_plugins, true ) ) {
-        continue;
-    }
-
     if ( empty( $plugin->versions ) ) {
         continue;
     }
@@ -358,17 +356,10 @@ foreach ( $themes as $theme ) {
     $theme = (object) $theme;
     $slug  = $theme->slug ?? '';
 
-    if ( \in_array( $slug, $skip_themes, true ) ) {
-        continue;
-    }
-
     if ( empty( $theme->versions ) ) {
         msg( 'Theme has no versions: ' . $slug );
         continue;
     }
-
-    // Only keep 10 theme versions.
-    $theme->versions = collect( $theme->versions )->sortKeys()->reverse()->take( 10 );
 
     foreach ( $theme->versions as $theme_version => $theme_version_url ) {
         $theme_cache_file_name = "$cache_dir/theme-$slug-$theme_version.json";
@@ -479,7 +470,7 @@ foreach ( $core as $language => $versions ) {
 
     foreach ( $versions as $version => $dist ) {
         $required = [
-            'koodimonni/composer-dropin-installer' => '^1',
+            'koodimonni/composer-dropin-installer' => '>=0.2.3',
         ];
 
         foreach ( $components as $component ) {
@@ -496,7 +487,7 @@ foreach ( $core as $language => $versions ) {
         }
 
         $description = sprintf(
-            'Full WordPress translation (including themes and core plugins) for %s',
+            'Full Wordpress translation (including themes and core plugins) for %s',
             $language
         );
         if ( ! empty( $lang_name ) ) {
