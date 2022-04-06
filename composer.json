@@ -1,6 +1,8 @@
 {
     "name": "wp-languages/wp-languages.github.io",
     "description": "Composer language packs for WordPress translations. This includes translations for core and official themes and few plugins.",
+    "license": "MIT",
+    "type": "library",
     "keywords": [
         "package",
         "repository",
@@ -9,11 +11,6 @@
         "languages",
         "gh-pages"
     ],
-    "homepage": "https://wp-languages.github.io/",
-    "issues": "https://github.com/wp-languages/wp-languages.github.io/issues",
-    "forum": "https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021",
-    "type": "library",
-    "license": "MIT",
     "authors": [
         {
             "name": "Onni Hakala",
@@ -24,11 +21,31 @@
             "homepage": "https://github.com/ivuorinen"
         }
     ],
+    "homepage": "https://wp-languages.github.io/",
+    "require": {
+        "php": "^7.4 || >=8",
+        "ext-json": "*",
+        "composer/satis": "^1.0",
+        "illuminate/collections": "^8.55",
+        "rmccue/requests": "^1.8"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.25"
+    },
+    "bin": [
+        "bin/cache"
+    ],
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
     "scripts": {
-        "run-all": [
-            "@cleanup",
-            "@cache",
-            "@build"
+        "build": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./docs/",
+        "build-ci": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./",
+        "cache": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php ./bin/cache"
         ],
         "cache-build": [
             "@cache",
@@ -39,21 +56,12 @@
             "@build-ci"
         ],
         "cleanup": "rm ./cache/*.json",
-        "cache": [
-            "Composer\\Config::disableProcessTimeout",
-            "@php ./bin/cache"
-        ],
-        "build": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./docs/",
-        "build-ci": "@php -d memory_limit=-1 ./vendor/bin/satis build ./satis.json ./"
+        "run-all": [
+            "@cleanup",
+            "@cache",
+            "@build"
+        ]
     },
-    "bin": [
-        "bin/cache"
-    ],
-    "require": {
-        "php": ">=7.3||>=8",
-        "composer/satis": "^1.0",
-        "rmccue/requests": "^1.8",
-        "illuminate/collections": "^8.55",
-        "ext-json": "*"
-    }
+    "forum": "https://discourse.roots.io/t/install-update-wordpress-languages-with-composer/2021",
+    "issues": "https://github.com/wp-languages/wp-languages.github.io/issues"
 }
