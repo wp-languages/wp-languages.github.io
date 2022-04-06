@@ -12,6 +12,10 @@ $query_author = 'wordpressdotorg';
 $extra_plugins = [ 'akismet', 'bbpress', 'buddypress', 'woocommerce', 'wordpress-importer' ];
 $extra_themes  = [ 'twentyseventeen', 'twentynineteen', 'twentytwenty', 'twentytwentyone' ];
 
+// Skipped themes and plugins.
+$skip_plugins = [ 'performance-lab' ];
+$skip_themes = [];
+
 // Config directory and filenames
 $config_dir       = $root . '/config';
 $config_languages = $config_dir . '/languages-info.json';
@@ -290,6 +294,10 @@ $plugins = collect( get_cached( $cache_file_core_plugins )->get( 'plugins', [] )
 foreach ( $plugins as $plugin ) {
     $plugin = (object) collect( $plugin )->toArray();
 
+    if ( \in_array( $plugin->slug, $skip_plugins, true ) ) {
+        continue;
+    }
+
     if ( empty( $plugin->versions ) ) {
         continue;
     }
@@ -355,6 +363,10 @@ $themes = collect( get_cached( $cache_file_core_themes )->get( 'themes', [] ) )
 foreach ( $themes as $theme ) {
     $theme = (object) $theme;
     $slug  = $theme->slug ?? '';
+
+    if ( \in_array( $slug, $skip_themes, true ) ) {
+        continue;
+    }
 
     if ( empty( $theme->versions ) ) {
         msg( 'Theme has no versions: ' . $slug );
@@ -487,7 +499,7 @@ foreach ( $core as $language => $versions ) {
         }
 
         $description = sprintf(
-            'Full Wordpress translation (including themes and core plugins) for %s',
+            'Full WordPress translation (including themes and core plugins) for %s',
             $language
         );
         if ( ! empty( $lang_name ) ) {
