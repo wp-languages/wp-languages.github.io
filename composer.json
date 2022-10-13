@@ -55,7 +55,7 @@
             "@cache",
             "@build-ci"
         ],
-        "cleanup": "rm ./cache/*.json",
+        "cleanup": "rm -rf ./cache/*.json ./docs/*",
         "run-all": [
             "@cleanup",
             "@cache",

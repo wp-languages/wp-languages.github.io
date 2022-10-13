@@ -14,18 +14,18 @@ $extra_themes  = [ 'twentyseventeen', 'twentynineteen', 'twentytwenty', 'twentyt
 
 // Skipped themes and plugins.
 $skip_plugins = [ 'performance-lab' ];
-$skip_themes = [];
+$skip_themes  = [];
 
 // Config directory and filenames
-$config_dir       = $root . '/config';
-$config_languages = $config_dir . '/languages-info.json';
-$config_packages  = $config_dir . '/wp-packages.json';
+$config_dir = $root . '/config';
 
 // Cache directory and filenames
 $cache_dir               = $root . '/cache';
 $cache_file_versions     = $cache_dir . '/wp-versions.json';
 $cache_file_core_themes  = $cache_dir . '/wp-core-themes.json';
 $cache_file_core_plugins = $cache_dir . '/wp-core-plugins.json';
+$config_languages        = $cache_dir . '/languages-info.json';
+$config_packages         = $cache_dir . '/wp-packages.json';
 
 // API Urls
 $api_versions = 'https://api.wordpress.org/core/stable-check/1.0/';
@@ -51,16 +51,20 @@ if ( should_refresh_cache( $cache_file_versions, HOUR_IN_SECONDS * 3 ) ) {
     // Get available WordPress versions
     try {
         $wp_versions = collect( req( $api_versions ) )
-            ->mapToGroups( function ( $item, $key ) {
-                return [ $item => $key ];
-            } );
+            ->mapToGroups( fn( $item, $key ) => [ $item => $key ] );
 
         // Latest version to get the available languages
         $latest = $wp_versions->get( 'latest' )->first();
         // Versions we still fetch
-        $outdated = $wp_versions->get( 'outdated' )->values();
+        $outdated = collect( $wp_versions->get( 'outdated' ) )
+            ->reverse()
+            ->take( 30 )
+            ->values();
         // Versions we drop from the repository to save time
-        $insecure = $wp_versions->get( 'insecure' )->values();
+        $insecure = collect( $wp_versions->get( 'insecure' ) )
+            ->reverse()
+            ->take( 30 )
+            ->values();
 
         cache( [
             'outdated' => $outdated,
@@ -216,15 +220,13 @@ if ( should_refresh_cache( $cache_file_core_plugins ) ) {
         }
 
         $plugins = collect( $plugins )
-            ->map( function ( $plugin ) {
-                return [
-                    $plugin->slug => [
-                        'name'     => $plugin->name,
-                        'slug'     => $plugin->slug,
-                        'versions' => $plugin->versions,
-                    ],
-                ];
-            } );
+            ->map( fn( $plugin ) => [
+                $plugin->slug => [
+                    'name'     => $plugin->name,
+                    'slug'     => $plugin->slug,
+                    'versions' => collect($plugin->versions)->sortKeysDesc()->take(25)->toArray(),
+                ],
+            ] );
 
         cache( [ 'plugins' => $plugins ], $cache_file_core_plugins );
     }
@@ -302,6 +304,9 @@ foreach ( $plugins as $plugin ) {
         continue;
     }
 
+    // Only keep 25 newest plugin versions.
+    $plugin->versions = collect( $plugin->versions )->sortKeys()->reverse()->take( 25 );
+
     // Get all translations to all known plugin versions
     foreach ( $plugin->versions as $version => $url ) {
         $slug = $plugin->slug;
@@ -372,6 +377,9 @@ foreach ( $themes as $theme ) {
         msg( 'Theme has no versions: ' . $slug );
         continue;
     }
+
+    // Only keep 10 newest theme versions.
+    $theme->versions = collect( $theme->versions )->sortKeys()->reverse()->take( 10 );
 
     foreach ( $theme->versions as $theme_version => $theme_version_url ) {
         $theme_cache_file_name = "$cache_dir/theme-$slug-$theme_version.json";
