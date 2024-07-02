@@ -56,7 +56,7 @@ jobs:
           git commit -a -m "Automated build"
 
       - name: Publish changes to master branch
-        uses: ad-m/github-push-action@887c31bd838a40c4da09953b6df364b5439bd7c3
+        uses: ad-m/github-push-action@77c5b412c50b723d2a4fbc6d71fb5723bcd439aa
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
