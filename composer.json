@@ -25,7 +25,7 @@
     "require": {
         "php": "^7.4 || >=8",
         "ext-json": "*",
-        "composer/satis": "^1.0",
+        "composer/satis": "*",
         "illuminate/collections": "^8.55",
         "rmccue/requests": "^1.8"
     },
