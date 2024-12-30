@@ -62,13 +62,3 @@ jobs:
           branch: master
           force: true
 
-  #cleanup:
-  #  if: always()
-  #  needs: [ setup ]
-  #  name: Clean old actions/composer packages
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - name: Delete old actions/composer packages
-  #      uses: actions/delete-package-versions@v1
-  #      with:
-  #        package-name: 'php-actions_composer_wp-languages.github.io'

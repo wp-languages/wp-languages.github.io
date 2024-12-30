@@ -23,14 +23,14 @@
     ],
     "homepage": "https://wp-languages.github.io/",
     "require": {
-        "php": "^7.4 || >=8",
+        "php": "^7.4",
         "ext-json": "*",
-        "composer/satis": "*",
-        "illuminate/collections": "^8.55",
-        "rmccue/requests": "^1.8"
+        "composer/satis": "^1",
+        "illuminate/collections": "^8",
+        "rmccue/requests": "^2"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.25"
+        "ergebnis/composer-normalize": "^2"
     },
     "bin": [
         "bin/cache"

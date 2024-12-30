@@ -12,10 +12,7 @@
 
     <table>
         {% if package.highest.type %}
-            <tr>
-                <th>Type</th>
-                <td>{{ package.highest.type|join(', ') }}</td>
-            </tr>
+            <tr><th>Type</th><td>{{ package.highest.type|join(', ') }}</td></tr>
         {% endif %}
 
         <tr>

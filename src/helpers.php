@@ -6,6 +6,7 @@ error_reporting( E_ALL );
 ini_set( 'memory_limit', '-1' );
 date_default_timezone_set( 'Europe/Helsinki' );
 set_time_limit( 900 ); // 15min
+use WpOrg\Requests\Requests;
 
 if ( ! file_exists( $root . '/vendor/illuminate/collections/helpers.php' ) ) {
     echo "Please install composer dependencies before continuing..." . PHP_EOL;

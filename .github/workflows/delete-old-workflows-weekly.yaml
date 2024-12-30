@@ -41,8 +41,8 @@ on:
         description: 'Logs simulated changes, no deletions are performed'
         required: false
   schedule:
+    # Run weekly, at 04:05 every Monday.
     - cron: '5 4 * * 1'
-# Run weekly, at 04:05 every Monday.
 
 jobs:
   del_runs:
