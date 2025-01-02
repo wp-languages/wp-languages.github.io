@@ -1,21 +1,24 @@
 <?php
-$root = dirname( __DIR__ );
+
+$root = dirname(__DIR__);
 require_once $root . '/vendor/autoload.php';
 
-error_reporting( E_ALL );
-ini_set( 'memory_limit', '-1' );
-date_default_timezone_set( 'Europe/Helsinki' );
-set_time_limit( 900 ); // 15min
 use WpOrg\Requests\Requests;
 
-if ( ! file_exists( $root . '/vendor/illuminate/collections/helpers.php' ) ) {
+error_reporting(E_ALL);
+ini_set('memory_limit', '-1');
+date_default_timezone_set('Europe/Helsinki');
+set_time_limit(900); // 15min
+
+if (! file_exists($root . '/vendor/illuminate/collections/helpers.php')) {
     echo "Please install composer dependencies before continuing..." . PHP_EOL;
-    exit( 2 );
+    exit(2);
 }
 require_once $root . '/vendor/illuminate/collections/helpers.php';
 
 const HOUR_IN_SECONDS = 3600;
 const DAY_IN_SECONDS  = HOUR_IN_SECONDS * 24;
+const DEFAULT_CACHE_TIME = HOUR_IN_SECONDS * 3;
 
 /**
  * Request helper.
@@ -25,19 +28,20 @@ const DAY_IN_SECONDS  = HOUR_IN_SECONDS * 24;
  * @return object
  * @throws \JsonException
  */
-function req( $url = '' ) {
-    $response = Requests::get( $url, [
+function req($url = '')
+{
+    $response = Requests::get($url, [
         'Accept' => 'application/json',
         'Content-Type: application/json',
     ], [
         'timeout'   => 30,
         'useragent' => 'Sorry for traffic! This is curl-bot for: https://wp-languages.github.io.',
-    ] );
+    ]);
 
-    if ( ! $response->success ) {
+    if (! $response->success) {
         error(
             'Code: %d / Message: %s',
-            [ $response->status_code, $response->body ]
+            [$response->status_code, $response->body]
         );
     }
 
@@ -60,13 +64,14 @@ function req( $url = '' ) {
  *
  * @return bool
  */
-function should_refresh_cache( $filename = '', $cache_time = 259200 ) {
-    $filename = realpath( $filename );
-    $file_age = (int) ( time() - filemtime( $filename ) );
+function should_refresh_cache($filename = '', $cache_time = 259200)
+{
+    $filename = realpath($filename);
+    $file_age = (int) (time() - filemtime($filename));
 
     // echo '(?) File age: ' . $filename . ' = ' . $file_age . PHP_EOL;
 
-    return ! file_exists( $filename ) || $file_age > $cache_time;
+    return ! file_exists($filename) || $file_age > $cache_time;
 }
 
 /**
@@ -76,29 +81,29 @@ function should_refresh_cache( $filename = '', $cache_time = 259200 ) {
  *
  * @return Illuminate\Support\Collection
  */
-function get_cached( $filename = '' ) {
-    if ( ! file_exists( $filename ) ) {
-        error( 'Could not find file: %s', [ $filename ] );
+function get_cached($filename = '')
+{
+    if (! file_exists($filename)) {
+        error('Could not find file: %s', [$filename]);
     }
 
     try {
         $content = json_decode(
-            file_get_contents( $filename ),
+            file_get_contents($filename),
             true,
             512,
             JSON_THROW_ON_ERROR
         );
 
-        return collect( $content );
-    }
-    catch ( JsonException $e ) {
+        return collect($content);
+    } catch (JsonException $e) {
         error(
             'Could not open file %s: %s',
-            [ $filename, $e->getMessage() ]
+            [$filename, $e->getMessage()]
         );
     }
 
-    return collect( [] );
+    return collect([]);
 }
 
 /**
@@ -110,13 +115,14 @@ function get_cached( $filename = '' ) {
  * @return bool
  * @throws \JsonException
  */
-function cache( $payload, $filename ) {
+function cache($payload, $filename)
+{
     $encoded = $payload instanceof \Illuminate\Support\Collection
-        ? $payload->toJson( JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES )
-        : json_encode( $payload, JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES );
+        ? $payload->toJson(JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES)
+        : json_encode($payload, JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES);
 
     // True if successful, false if couldn't save.
-    return file_put_contents( $filename, $encoded ) !== false;
+    return file_put_contents($filename, $encoded) !== false;
 }
 
 /**
@@ -126,21 +132,21 @@ function cache( $payload, $filename ) {
  *
  * @return array
  */
-function get_file( $filename = '' ) {
+function get_file($filename = '')
+{
     try {
         $data = (array) json_decode(
-            file_get_contents( $filename ),
+            file_get_contents($filename),
             true,
             512,
             JSON_THROW_ON_ERROR
         );
 
         return $data;
-    }
-    catch ( JsonException $e ) {
+    } catch (JsonException $e) {
         error(
             'get_file Error on file %s, %s',
-            [ $filename, $e->getMessage() ]
+            [$filename, $e->getMessage()]
         );
     }
 
@@ -153,12 +159,13 @@ function get_file( $filename = '' ) {
  * @param string       $msg    sprintf formatted error message.
  * @param array|string $values Array of values for the sprintf placeholders.
  */
-function error( $msg = '', $values = [] ) {
-    if ( ! is_array( $values ) ) {
-        $values = [ $values ];
+function error($msg = '', $values = [])
+{
+    if (! is_array($values)) {
+        $values = [$values];
     }
 
-    die( vsprintf( '[Error] ' . $msg, $values ) . PHP_EOL );
+    die(vsprintf('[Error] ' . $msg, $values) . PHP_EOL);
 }
 
 /**
@@ -167,8 +174,9 @@ function error( $msg = '', $values = [] ) {
  * @param string $msg    Message to output.
  * @param string $symbol Prefix symbol.
  */
-function msg( $msg = '', $symbol = '*' ) {
-    echo sprintf( '(%s) %s%s', $symbol, $msg, PHP_EOL );
+function msg($msg = '', $symbol = '*')
+{
+    echo sprintf('(%s) %s%s', $symbol, $msg, PHP_EOL);
 }
 
 /**
@@ -178,8 +186,9 @@ function msg( $msg = '', $symbol = '*' ) {
  *
  * @return false|string
  */
-function get_file_extension( $filename = '' ) {
-    return substr( strrchr( $filename, '.' ), 1 );
+function get_file_extension($filename = '')
+{
+    return substr(strrchr($filename, '.'), 1);
 }
 
 /**
@@ -189,13 +198,14 @@ function get_file_extension( $filename = '' ) {
  *
  * @return string
  */
-function query_params( $query_params = [] ) {
-    return collect( $query_params )
-        ->map( function ( $val = '', $key = '' ) {
-            return trim( $key . '=' . $val, " \t\n\r\0\x0B=" );
-        } )
+function query_params($query_params = [])
+{
+    return collect($query_params)
+        ->map(function ($val = '', $key = '') {
+            return trim($key . '=' . $val, " \t\n\r\0\x0B=");
+        })
         ->flatten()
-        ->join( '&' );
+        ->join('&');
 }
 
 /**
@@ -205,8 +215,9 @@ function query_params( $query_params = [] ) {
  *
  * @return string
  */
-function get_package_vendor( $type = '' ) {
-    switch ( $type ) {
+function get_package_vendor($type = '')
+{
+    switch ($type) {
         case 'wordpress-plugin-language':
             return 'koodimonni-plugin-language';
         case 'wordpress-theme-language':
@@ -227,7 +238,8 @@ function get_package_vendor( $type = '' ) {
  *
  * @return array
  */
-function build_package( $vendor, $name, $lang, $version, $package, $description ) {
+function build_package($vendor, $name, $lang, $version, $package, $description)
+{
     return [
         'type'    => 'package',
         'package' => [
@@ -238,16 +250,37 @@ function build_package( $vendor, $name, $lang, $version, $package, $description 
                 $lang,
             ),
             'type'        => 'wordpress-language',
-            'keywords'    => [ 'WordPress', 'Translation', $name, $lang ],
+            'keywords'    => ['WordPress', 'Translation', $name, $lang],
             'description' => $description,
             'version'     => $version,
             'dist'        => [
                 'url'  => $package,
-                'type' => get_file_extension( $package ),
+                'type' => get_file_extension($package),
             ],
             'require'     => [
                 'koodimonni/composer-dropin-installer' => '>=0.2.3',
             ],
         ],
     ];
+}
+
+/**
+ * Time difference helper.
+ *
+ * @param int    $start Start time.
+ * @param int    $end   End time.
+ * @param string $type  Return type (minutes or seconds).
+ * @return string
+ */
+function time_diff($start, $end, $type = 'seconds')
+{
+    $diff = $end - $start;
+
+    switch ($type) {
+        case 'minutes':
+            return round($diff / 60, 2) . ' minutes';
+        case 'seconds':
+        default:
+            return $diff . ' seconds';
+    }
 }
