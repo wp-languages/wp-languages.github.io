@@ -224,7 +224,7 @@ if ( should_refresh_cache( $cache_file_core_plugins ) ) {
                 $plugin->slug => [
                     'name'     => $plugin->name,
                     'slug'     => $plugin->slug,
-                    'versions' => collect($plugin->versions)->sortKeysDesc()->take(25)->toArray(),
+                    'versions' => collect($plugin->versions)->sortKeysUsing(fn($a, $b) => version_compare($b, $a))->take(25)->toArray(),
                 ],
             ] );
 
@@ -305,7 +305,7 @@ foreach ( $plugins as $plugin ) {
     }
 
     // Keep 50 newest plugin versions.
-    $plugin->versions = collect( $plugin->versions )->sortKeys()->reverse()->take( 50 );
+    $plugin->versions = collect( $plugin->versions )->sortKeysUsing(fn($a, $b) => version_compare($b, $a))->take( 50 );
 
     // Get all translations to all known plugin versions
     foreach ( $plugin->versions as $version => $url ) {
@@ -379,7 +379,7 @@ foreach ( $themes as $theme ) {
     }
 
     // Keep 25 newest theme versions.
-    $theme->versions = collect( $theme->versions )->sortKeys()->reverse()->take( 25 );
+    $theme->versions = collect( $theme->versions )->sortKeysUsing(fn($a, $b) => version_compare($b, $a))->take( 25 );
 
     foreach ( $theme->versions as $theme_version => $theme_version_url ) {
         $theme_cache_file_name = "$cache_dir/theme-$slug-$theme_version.json";
