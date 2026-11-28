@@ -1,11 +1,2 @@
-.DS_store
-vendor
-
-# Ignore all satis libraries
-satis.json
-
-# Ignore static html build by satis
-docs/*
-include/*
-packages.json
-index.html
+*
+!include/\n!index.html\npackages.json
